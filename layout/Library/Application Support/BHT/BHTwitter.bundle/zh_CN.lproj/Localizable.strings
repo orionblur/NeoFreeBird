@@ -38,6 +38,9 @@
 "PADLOCK_OPTION_TITLE" = "锁定 Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "启用 Face ID 或密码解锁 Twitter。";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "隐藏新推文";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "隐藏在有新推文时出现在屏幕顶部的提示栏。";
+
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "使用外部浏览器";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "在 Safari 或默认浏览器中打开链接。";
 

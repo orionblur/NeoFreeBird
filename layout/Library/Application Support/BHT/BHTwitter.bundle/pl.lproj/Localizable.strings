@@ -36,6 +36,9 @@
 "PADLOCK_OPTION_TITLE" = "Zablokuj Twittera";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Wymagaj Face ID lub kodu, aby otworzyć Twittera.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Ukryj nowe tweety";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Ukrywa pasek wyświetlany u góry ekranu, gdy pojawiają się nowe tweety.";
+
 "NEW_INAPP_WEB_OPTION_TITLE" = "Ulepszona przeglądarka w aplikacji (beta)";
 "NEW_INAPP_WEB_DETAIL_TITLE" = "Używaj nowej przeglądarki w aplikacji do otwierania linków.";
 

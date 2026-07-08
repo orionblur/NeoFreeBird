@@ -35,6 +35,10 @@
 "HIDE_WHO_FOLLOW_OPTION" = "Keine „Wem folgen?“";
 "HIDE_WHO_FOLLOW_OPTION_DETAIL_TITLE" = "Folge-Empfehlungen entfernen.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Keine neuen Tweets";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Blendet die Leiste aus, die oben auf dem Bildschirm erscheint, wenn neue Tweets verfügbar sind.";
+
+
 "PADLOCK_OPTION_TITLE" = "Twitter sperren";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Face ID oder einen Code verlangen, um Twitter zu öffnen.";
 

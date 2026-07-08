@@ -35,6 +35,9 @@
 "HIDE_WHO_FOLLOW_OPTION" = "Без «Кого читать»";
 "HIDE_WHO_FOLLOW_OPTION_DETAIL_TITLE" = "Убрать рекомендации из профилей.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Скрыть новые твиты";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Скрывает панель, которая появляется в верхней части экрана при появлении новых твитов.";
+
 "PADLOCK_OPTION_TITLE" = "Заблокировать Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Требуется Face ID или пароль для входа.";
 

@@ -35,6 +35,10 @@
 "HIDE_WHO_FOLLOW_OPTION" = "Tanpa 'Siapa yang harus diikuti'";
 "HIDE_WHO_FOLLOW_OPTION_DETAIL_TITLE" = "Sembunyikan saran akun dari profil.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Tanpa bilah 'Tweet baru'";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Sembunyikan bilah yang muncul di atas layar saat ada Tweet baru.";
+
+
 "PADLOCK_OPTION_TITLE" = "Kunci Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Butuh Face ID atau kode untuk membuka Twitter.";
 

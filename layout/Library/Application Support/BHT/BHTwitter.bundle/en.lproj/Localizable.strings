@@ -88,6 +88,9 @@
 "NEW_INAPP_WEB_OPTION_TITLE" = "Improved in-app browser (beta)";
 "NEW_INAPP_WEB_DETAIL_TITLE" = "Use Twitter's new in-app browser for opening links.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Hide new tweets";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Hides the bar that appears on the top of the screen when new tweets are available.";
+
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "Use external browser";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Open links in Safari or your default browser.";
 

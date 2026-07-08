@@ -88,6 +88,9 @@
 "NEW_INAPP_WEB_OPTION_TITLE" = "アプリ内ブラウザを改善(ベータ版)";
 "NEW_INAPP_WEB_DETAIL_TITLE" = "リンクを開く際に、Twitterの新しいアプリ内ブラウザを使用します。";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "新しいツイートを非表示にする";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "新しいツイートがあるときに画面上部に表示されるバーを非表示にします。";
+
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "外部ブラウザを使用";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Safariまたはデフォルトのブラウザでリンクを開きます。";
 

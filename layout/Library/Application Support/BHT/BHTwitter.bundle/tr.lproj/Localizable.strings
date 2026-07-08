@@ -38,6 +38,9 @@
 "PADLOCK_OPTION_TITLE" = "Twitter’ı kilitle";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Açmak için Face ID veya şifre iste.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Yeni tweetleri gizle";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Yeni tweetler geldiğinde ekranın üst kısmında görünen çubuğu gizler.";
+
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "Harici tarayıcı kullan";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Linkleri Safari veya varsayılan tarayıcıda aç.";
 

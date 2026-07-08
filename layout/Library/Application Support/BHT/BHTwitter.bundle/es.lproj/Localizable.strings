@@ -38,6 +38,10 @@
 "PADLOCK_OPTION_TITLE" = "Bloquear Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Requiere Face ID o código para abrir Twitter.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Ocultar nuevos Tweets";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Oculta la barra que aparece en la parte superior de la pantalla cuando hay nuevos Tweets disponibles.";
+
+
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "Usar navegador externo";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Abre enlaces en Safari o el navegador predeterminado.";
 

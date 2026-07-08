@@ -36,6 +36,9 @@
 "HIDE_WHO_FOLLOW_OPTION" = "لا 'من تتابع'";
 "HIDE_WHO_FOLLOW_OPTION_DETAIL_TITLE" = "إخفاء اقتراحات المتابعة.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "إخفاء التغريدات الجديدة";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "إخفاء الشريط الذي يظهر أعلى الشاشة عند توفر تغريدات جديدة.";
+
 "PADLOCK_OPTION_TITLE" = "قفل تويتر";
 "PADLOCK_OPTION_DETAIL_TITLE" = "يتطلب Face ID أو رمز مرور لفتح تويتر.";
 

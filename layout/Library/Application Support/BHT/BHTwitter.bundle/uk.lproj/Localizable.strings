@@ -40,6 +40,9 @@
 "PADLOCK_OPTION_TITLE" = "Заблокувати Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Потрібен Face ID або пароль для входу.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Приховати нові твіти";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Приховує панель, яка з’являється у верхній частині екрана, коли з’являються нові твіти.";
+
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "Відкривати у браузері";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Відкривати посилання в Safari або браузері за замовчуванням.";
 

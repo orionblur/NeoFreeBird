@@ -35,6 +35,10 @@
 "HIDE_WHO_FOLLOW_OPTION" = "Bez 'Koga pratiti'";
 "HIDE_WHO_FOLLOW_OPTION_DETAIL_TITLE" = "Ukloni prijedloge za praćenje iz profila.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Bez trake za nove tweetove";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Sakrij traku koja se pojavljuje na vrhu zaslona kada su dostupni novi tweetovi.";
+
+
 "PADLOCK_OPTION_TITLE" = "Zaključaj Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Za otvaranje Twittera potreban je Face ID ili šifra.";
 

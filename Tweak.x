@@ -41,6 +41,12 @@
 @property(nonatomic) BOOL prefersEphemeralWebBrowserSession;
 @end
 
+@interface TFNPillControl : UIView
+@end
+
+@interface TFNPillTransformContainerView : UIView
+@end
+
 // Forward declarations
 static void BHT_UpdateAllTabBarIcons(void);
 static void BHT_applyThemeToWindow(UIWindow *window);
@@ -2992,6 +2998,38 @@ static NSNumber *BHTFeatureSwitchOverrideValueForKey(NSString *key) {
 
     return nil;
 }
+
+%hook TFNPillControl
+
+- (void)didMoveToSuperview {
+    %orig;
+
+    if (![BHTManager hideNewTweets]) {
+        return;
+    }
+
+    self.userInteractionEnabled = NO;
+    self.alpha = 0.0;
+}
+
+- (void)setHidden:(BOOL)hidden {
+    %orig(YES);
+}
+
+%end
+
+
+%hook TFNPillTransformContainerView
+
+- (void)setHidden:(BOOL)hidden {
+    if (![BHTManager hideNewTweets]) {
+        %orig(hidden);
+        return;
+    }
+    %orig(YES);
+}
+
+%end
 
 // MARK: Voice, SensitiveTweetWarnings, autoHighestLoad, VideoZoom, VODCaptions, disableSpacesBar feature
 %hook TPSTwitterFeatureSwitches

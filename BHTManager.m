@@ -298,7 +298,9 @@
 + (BOOL)hideTrends {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"hide_trends"];
 }
-
++ (BOOL)hideNewTweets {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"hide_new_tweets"];
+}
 + (BOOL)disableHighlights {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"disableHighlights"];
 }

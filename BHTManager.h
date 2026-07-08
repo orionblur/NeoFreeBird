@@ -65,6 +65,7 @@
 + (BOOL)disableMediaTab;
 + (BOOL)disableArticles;
 + (BOOL)hideCustomTimelines;
++ (BOOL)hideNewTweets;
 + (BOOL)hideTrends;
 + (BOOL)disableHighlights;
 

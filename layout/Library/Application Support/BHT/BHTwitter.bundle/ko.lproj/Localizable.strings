@@ -88,6 +88,9 @@
 "NEW_INAPP_WEB_OPTION_TITLE" = "개선된 인앱 브라우저 (베타)";
 "NEW_INAPP_WEB_DETAIL_TITLE" = "링크를 열 때 트위터의 새 인앱 브라우저를 사용합니다.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "새 트윗 숨기기";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "새로운 트윗이 있을 때 화면 상단에 표시되는 바를 숨깁니다.";
+
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "인앱 브라우저 끄기";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "링크를 Safari나 사용자의 기본 브라우저로 엽니다.";
 

@@ -85,6 +85,9 @@
 "PADLOCK_OPTION_TITLE" = "鎖定 Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "開啟時需使用 Face ID 或密碼。";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "隱藏新推文";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "隱藏當有新推文時會出現在螢幕頂端的工具列。";
+
 "NEW_INAPP_WEB_OPTION_TITLE" = "改良版內建瀏覽器 (測試版)";
 "NEW_INAPP_WEB_DETAIL_TITLE" = "使用 Twitter 新版內建瀏覽器開啟連結。";
 

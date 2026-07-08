@@ -35,6 +35,10 @@
 "HIDE_WHO_FOLLOW_OPTION" = "Pas de 'Qui suivre'";
 "HIDE_WHO_FOLLOW_OPTION_DETAIL_TITLE" = "Supprime les suggestions de suivi.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Pas de barre de nouveaux Tweets";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Cache la barre qui apparaît en haut de l’écran quand de nouveaux Tweets sont disponibles.";
+
+
 "PADLOCK_OPTION_TITLE" = "Verrouiller Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Nécessite Face ID ou un code pour ouvrir Twitter.";
 

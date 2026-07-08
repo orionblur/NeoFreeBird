@@ -37,6 +37,9 @@
 "HIDE_WHO_FOLLOW_OPTION" = "Ingen ’Vem att följa’";
 "HIDE_WHO_FOLLOW_OPTION_DETAIL_TITLE" = "Ta bort förslag om vem du kan följa från profiler.";
 
+"HIDE_NEW_TWEETS_OPTION_TITLE" = "Dölj nya tweets";
+"HIDE_NEW_TWEETS_OPTION_DETAIL_TITLE" = "Döljer fältet som visas längst upp på skärmen när det finns nya tweets.";
+
 "PADLOCK_OPTION_TITLE" = "Lås Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Kräv Face ID eller lösenkod för att öppna Twitter.";
 
