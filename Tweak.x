@@ -1230,6 +1230,10 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
 %end
 
 // MARK: DM download
+@interface T1DirectMessageEntryMediaCell ()
+@property (nonatomic, assign) BOOL bht_isGIFDownload;
+@end
+
 %hook T1DirectMessageEntryMediaCell
 %property (nonatomic, strong) JGProgressHUD *hud;
 - (void)setEntryViewModel:(id)arg1 {
@@ -1262,12 +1266,15 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
     [actions addObject:title];
 
     T1PlayerMediaEntitySessionProducible *session = self.inlineMediaView.viewModel.playerSessionProducer.sessionProducible;
+    BOOL isGIF = session.mediaEntity.mediaType == 2;
     for (TFSTwitterEntityMediaVideoVariant *i in session.mediaEntity.videoInfo.variants) {
         if ([i.contentType isEqualToString:@"video/mp4"]) {
-            TFNActionItem *download = [%c(TFNActionItem) actionItemWithTitle:[BHTManager getVideoQuality:i.url] imageName:@"arrow_down_circle_stroke" action:^{
+            NSString *downloadTitle = isGIF ? @"GIF" : [BHTManager getVideoQuality:i.url];
+            TFNActionItem *download = [%c(TFNActionItem) actionItemWithTitle:downloadTitle imageName:@"arrow_down_circle_stroke" action:^{
                 BHDownload *DownloadManager = [[BHDownload alloc] init];
                 self.hud = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
                 self.hud.textLabel.text = [[BHTBundle sharedBundle] localizedStringForKey:@"PROGRESS_DOWNLOADING_STATUS_TITLE"];
+                self.bht_isGIFDownload = isGIF;
                 [DownloadManager downloadFileWithURL:[NSURL URLWithString:i.url]];
                 [DownloadManager setDelegate:self];
                 [self.hud showInView:topMostController().view];
@@ -1308,10 +1315,52 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
 %new - (void)downloadDidFinish:(NSURL *)filePath Filename:(NSString *)fileName {
     NSString *DocPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).firstObject;
     NSFileManager *manager = [NSFileManager defaultManager];
-    NSURL *newFilePath = [[NSURL fileURLWithPath:DocPath] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4", NSUUID.UUID.UUIDString]];
-    [manager moveItemAtURL:filePath toURL:newFilePath error:nil];
-    [self.hud dismiss];
-    [BHTManager showSaveVC:newFilePath];
+    NSString *extension = self.bht_isGIFDownload ? @"gif" : @"mp4";
+    NSURL *newFilePath = [[NSURL fileURLWithPath:DocPath] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", NSUUID.UUID.UUIDString, extension]];
+
+    if (!self.bht_isGIFDownload) {
+        [manager moveItemAtURL:filePath toURL:newFilePath error:nil];
+        [self.hud dismiss];
+        if ([BHTManager DirectSave]) {
+            [BHTManager save:newFilePath];
+        } else {
+            [BHTManager showSaveVC:newFilePath];
+        }
+        return;
+    }
+
+    // Stage the session file first; the download temp URL is only guaranteed to
+    // exist for the duration of this callback.
+    NSURL *stagedInput = [[NSURL fileURLWithPath:NSTemporaryDirectory()]
+                          URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4", NSUUID.UUID.UUIDString]];
+    NSError *stageError = nil;
+    [manager moveItemAtURL:filePath toURL:stagedInput error:&stageError];
+    if (stageError) {
+        [self.hud dismiss];
+        return;
+    }
+
+    self.hud.textLabel.text = @"Converting GIF";
+    NSString *inputPath = stagedInput.path;
+    NSString *outputPath = newFilePath.path;
+    NSString *command = [NSString stringWithFormat:@"-y -i \"%@\" -filter_complex \"[0:v]fps=15,scale=trunc(iw/2)*2:trunc(ih/2)*2:flags=lanczos,split[a][b];[a]palettegen[p];[b][p]paletteuse=dither=bayer:bayer_scale=5\" -loop 0 \"%@\"", inputPath, outputPath];
+
+    [FFmpegKit executeAsync:command withCompleteCallback:^(FFmpegSession *session) {
+        ReturnCode *returnCode = [session getReturnCode];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [manager removeItemAtURL:stagedInput error:nil];
+            if ([ReturnCode isSuccess:returnCode]) {
+                [self.hud dismiss];
+                if ([BHTManager DirectSave]) {
+                    [BHTManager save:newFilePath];
+                } else {
+                    [BHTManager showSaveVC:newFilePath];
+                }
+            } else {
+                [self.hud dismiss];
+            }
+        });
+    }];
 }
 %new - (void)downloadDidFailureWithError:(NSError *)error {
     if (error) {

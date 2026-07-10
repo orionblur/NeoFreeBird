@@ -24,6 +24,9 @@
         if ([file.pathExtension.lowercaseString isEqualToString:@"mp4"]) {
             [[NSFileManager defaultManager] removeItemAtURL:file error:nil];
         }
+        if ([file.pathExtension.lowercaseString isEqualToString:@"gif"]) {
+            [[NSFileManager defaultManager] removeItemAtURL:file error:nil];
+        }
     }
 
     NSArray <NSURL *> *TempFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtURL:[NSURL fileURLWithPath:NSTemporaryDirectory()] includingPropertiesForKeys:@[] options:NSDirectoryEnumerationSkipsHiddenFiles error:nil];
@@ -99,6 +102,13 @@
     return isMediaEntityVideo || isGIF;
 }
 + (void)save:(NSURL *)url {
+    if ([url.pathExtension.lowercaseString isEqualToString:@"gif"]) {
+        [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+            [PHAssetChangeRequest creationRequestForAssetFromImageAtFileURL:url];
+        } error:nil];
+        return;
+    }
+
     [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
         [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:url];
     } error:nil];

@@ -37,9 +37,13 @@
     [delegate downloadDidFinish:location Filename:self.fileName];
 }
 - (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error {
-    [delegate downloadDidFailureWithError:error];
+    if (error != nil) {
+        [delegate downloadDidFailureWithError:error];
+    }
 }
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    [delegate downloadDidFailureWithError:error];
+    if (error != nil) {
+        [delegate downloadDidFailureWithError:error];
+    }
 }
 @end
