@@ -3480,6 +3480,11 @@ static void BHTHideHomeAddTabButton(id container) {
 %end
 
 // MARK: Follow confirm
+@interface TUIFollowControl : UIControl
+- (void)setVariant:(NSUInteger)variant;
+- (NSUInteger)variant; // Ensure getter is declared
+@end
+
 %hook TUIFollowControl
 - (void)_followUser:(id)arg1 event:(id)arg2 {
     if ([BHTManager FollowConfirm]) {
@@ -3492,6 +3497,13 @@ static void BHTHideHomeAddTabButton(id container) {
         } showFrom:topMostController()];
     } else {
         return %orig;
+    }
+}
+- (void)didMoveToSuperview {
+    %orig;
+    if ([BHTManager hideFollowButton] && [self.superview isKindOfClass:%c(TTAStatusAuthorView)]) {
+        self.alpha = 0.0;
+        self.userInteractionEnabled = NO;
     }
 }
 %end
@@ -5032,11 +5044,6 @@ static BOOL findAndHideButtonWithAccessibilityId(UIView *viewToSearch, NSString 
 %end
 
 // MARK: - Restore Follow Button (TUIFollowControl)
-
-@interface TUIFollowControl : UIControl
-- (void)setVariant:(NSUInteger)variant;
-- (NSUInteger)variant; // Ensure getter is declared
-@end
 
 %hook TUIFollowControl
 
