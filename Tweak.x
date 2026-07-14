@@ -4454,24 +4454,26 @@ static void BHT_HideGetVerifiedUpsellInView(UIView *root) {
     if ([root.accessibilityIdentifier isEqualToString:@"T1ProfileAboutViewController"]) {
         CALayer *outerLayer = root.layer;
         if (outerLayer.sublayers.count != 1) {
-            return; // not laid out yet, try again on the next layout pass
+            return; 
         }
         CALayer *innerLayer = outerLayer.sublayers.firstObject;
         NSArray<CALayer *> *innerSublayers = innerLayer.sublayers;
         if (innerSublayers.count < 2) {
-            return; // not laid out yet, try again on the next layout pass
+            return; 
         }
         CALayer *lastLayer = innerSublayers[innerSublayers.count - 1];
         CALayer *secondLastLayer = innerSublayers[innerSublayers.count - 2];
         lastLayer.hidden = YES;
         secondLastLayer.hidden = YES;
 
-        // CALayer has no userInteractionEnabled, and root has other buttons we must not
-        // disable wholesale, so swallow taps only over this button's own rect: overlay a
+        // CALayer has no userInteractionEnabled, and there are other buttons in the "About this Profile" page
+        // that don't need to be disabled, so swallow taps only over this button's own rect: overlay a
         // transparent do-nothing UIView there - UIKit hit-tests topmost subview first, so
         // it intercepts touches in that region without affecting siblings elsewhere in root.
         CGRect frameInRoot = CGRectUnion([innerLayer convertRect:lastLayer.frame toLayer:outerLayer],
                                           [innerLayer convertRect:secondLastLayer.frame toLayer:outerLayer]);
+        // Extra padding from testing
+        frameInRoot = CGRectInset(frameInRoot, -12, -12);
 
         UIView *blocker = objc_getAssociatedObject(root, kBHTGetVerifiedBlockerViewKey);
         if (!blocker) {
