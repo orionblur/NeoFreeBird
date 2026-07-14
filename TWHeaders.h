@@ -235,6 +235,9 @@ static NSString *_lastCopiedURL;
 @property(retain, nonatomic) T1ProfileUserViewModel *viewModel;
 @end
 
+@interface T1ProfileAboutViewController: UIViewController
+@end
+
 @protocol T1StatusInlineActionButtonDelegate <NSObject>
 @end
 @protocol TTAStatusInlineActionButtonDelegate <NSObject>

@@ -4443,6 +4443,63 @@ static NSTimer *cookieRetryTimer = nil;
 
 %end
 
+// The "Upgrade to get verified" button on the About This Account screen is drawn via raw
+// CALayers on a plain UIView (identifiable only by its accessibilityIdentifier), not a
+// dedicated button subview, so there's nothing to hook directly - we re-hide the layers
+// that draw it on every layout pass, since Twitter's own layout code re-adds/reconfigures
+// them (removeFromSuperlayer only stuck until the next pass brought them back).
+static const void *kBHTGetVerifiedBlockerViewKey = &kBHTGetVerifiedBlockerViewKey;
+
+static void BHT_HideGetVerifiedUpsellInView(UIView *root) {
+    if ([root.accessibilityIdentifier isEqualToString:@"T1ProfileAboutViewController"]) {
+        CALayer *outerLayer = root.layer;
+        if (outerLayer.sublayers.count != 1) {
+            return; // not laid out yet, try again on the next layout pass
+        }
+        CALayer *innerLayer = outerLayer.sublayers.firstObject;
+        NSArray<CALayer *> *innerSublayers = innerLayer.sublayers;
+        if (innerSublayers.count < 2) {
+            return; // not laid out yet, try again on the next layout pass
+        }
+        CALayer *lastLayer = innerSublayers[innerSublayers.count - 1];
+        CALayer *secondLastLayer = innerSublayers[innerSublayers.count - 2];
+        lastLayer.hidden = YES;
+        secondLastLayer.hidden = YES;
+
+        // CALayer has no userInteractionEnabled, and root has other buttons we must not
+        // disable wholesale, so swallow taps only over this button's own rect: overlay a
+        // transparent do-nothing UIView there - UIKit hit-tests topmost subview first, so
+        // it intercepts touches in that region without affecting siblings elsewhere in root.
+        CGRect frameInRoot = CGRectUnion([innerLayer convertRect:lastLayer.frame toLayer:outerLayer],
+                                          [innerLayer convertRect:secondLastLayer.frame toLayer:outerLayer]);
+
+        UIView *blocker = objc_getAssociatedObject(root, kBHTGetVerifiedBlockerViewKey);
+        if (!blocker) {
+            blocker = [[UIView alloc] init];
+            blocker.backgroundColor = [UIColor clearColor];
+            [root addSubview:blocker];
+            objc_setAssociatedObject(root, kBHTGetVerifiedBlockerViewKey, blocker, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        }
+        blocker.frame = frameInRoot;
+        [root bringSubviewToFront:blocker];
+        return;
+    }
+    for (UIView *subview in root.subviews) {
+        BHT_HideGetVerifiedUpsellInView(subview);
+    }
+}
+
+%hook T1ProfileAboutViewController
+
+- (void)viewDidLayoutSubviews {
+    %orig;
+    if ([BHTManager hidePremiumOffer]) {
+        BHT_HideGetVerifiedUpsellInView(self.view);
+    }
+}
+
+%end
+
 // MARK: - Source Labels via T1ConversationFocalStatusView (Clean Approach)
 
 @interface T1ConversationFocalStatusView (BHTSourceLabels)
