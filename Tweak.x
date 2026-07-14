@@ -4927,6 +4927,19 @@ static BOOL BHColorTwitterIconEnabled(void) {
 }
 %end
 
+// MARK: - Hide Grok Button in Tweet Composer
+%hook TFNButtonBarView
+- (void)setLeadingViews:(NSArray *)leadingViews {
+    if ([BHTManager hideGrokAnalyze] && leadingViews.count) {
+        NSPredicate *notGrokButton = [NSPredicate predicateWithBlock:^BOOL(UIView *view, NSDictionary *bindings) {
+            return ![view.accessibilityIdentifier isEqualToString:@"GrokButton"];
+        }];
+        leadingViews = [leadingViews filteredArrayUsingPredicate:notGrokButton];
+    }
+    %orig(leadingViews);
+}
+%end
+
 %hook TFSTwitterStatus
 - (BOOL)grokAnalysisButton {
     if ([BHTManager hideGrokAnalyze]) return NO;
