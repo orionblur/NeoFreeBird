@@ -1706,6 +1706,7 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
     self.settings = @[
         @{ @"key": @"TweetToImage", @"titleKey": @"TWEET_TO_IMAGE_OPTION_TITLE", @"subtitleKey": @"TWEET_TO_IMAGE_OPTION_DETAIL_TITLE", @"default": @NO, @"type": @"toggle" },
         @{ @"key": @"like_con", @"titleKey": @"LIKE_CONFIRM_OPTION_TITLE", @"subtitleKey": @"LIKE_CONFIRM_OPTION_DETAIL_TITLE", @"default": @NO, @"type": @"toggle" },
+        @{ @"key": @"hide_screenshot_watermark", @"titleKey": @"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE", @"subtitleKey": @"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE", @"default": @YES, @"type": @"toggle" },
         @{ @"key": @"tweet_con", @"titleKey": @"TWEET_CONFIRM_OPTION_TITLE", @"subtitleKey": @"TWEET_CONFIRM_OPTION_DETAIL_TITLE", @"default": @NO, @"type": @"toggle" },
         @{ @"key": @"hide_blue_verified", @"titleKey": @"HIDE_BLUE_VERIFIED_OPTION_TITLE", @"subtitleKey": @"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE", @"default": @NO, @"type": @"toggle" },
         @{ @"key": @"hide_view_count", @"titleKey": @"HIDE_VIEW_COUNT_OPTION_TITLE", @"subtitleKey": @"HIDE_VIEW_COUNT_OPTION_DETAIL_TITLE", @"default": @YES, @"type": @"toggle" },

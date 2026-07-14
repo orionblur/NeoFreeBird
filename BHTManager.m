@@ -226,6 +226,9 @@
 + (BOOL)tweetToImage {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"TweetToImage"];
 }
++ (BOOL)hideScreenshotWatermark {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"hide_screenshot_watermark"];
+}
 + (BOOL)hideSpacesBar {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"hide_spaces"];
 }

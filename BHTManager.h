@@ -44,6 +44,7 @@
 + (BOOL)showScrollIndicator;
 + (BOOL)CopyProfileInfo;
 + (BOOL)tweetToImage;
++ (BOOL)hideScreenshotWatermark;
 + (BOOL)hideSpacesBar;
 + (BOOL)disableRTL;
 + (BOOL)alwaysOpenSafari;
