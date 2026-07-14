@@ -707,6 +707,14 @@ static UIViewController * _Nonnull topMostController() {
 @interface T1StandardStatusTranslateView : UIView
 @end
 
+// Forward declare TFNCustomScreenshotContainerView
+@interface TFNCustomScreenshotContainerView : UIView
+@end
+
+// Forward declare TUIFollowControlCustomScreenshot
+@interface TUIFollowControlCustomScreenshot : UIView
+@end
+
 // Forward declare TFNComposableViewSet
 @interface TFNComposableViewSet : NSObject
 @property(retain, nonatomic) NSMutableArray *views;

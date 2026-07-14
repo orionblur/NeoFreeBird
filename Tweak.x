@@ -5604,6 +5604,24 @@ static BOOL isViewInsideDashHostingController(UIView *view) {
 
 %end
 
+// MARK: - Hide Screenshot Container Views
+
+%hook TFNCustomScreenshotContainerView
+- (void)didMoveToWindow {
+    self.hidden = true;
+    self.alpha = 0.0;
+    self.userInteractionEnabled = false;
+}
+%end
+
+%hook TUIFollowControlCustomScreenshot
+- (void)didMoveToWindow {
+    self.hidden = true;
+    self.alpha = 0.0;
+    self.userInteractionEnabled = false;
+}
+%end
+
 // MARK: - Restore Pull-To-Refresh Sounds
 
 // Helper function to play sounds since we can't directly call methods on TFNPullToRefreshControl
