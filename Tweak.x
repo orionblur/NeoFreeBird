@@ -3541,6 +3541,31 @@ static void BHT_hideExploreTabBar(UIView *view) {
     }
 }
 
+%hook UIView
+-(void)didMoveToWindow {
+    %orig;
+    if ([BHTManager hideTrends] 
+    && [self.accessibilityIdentifier isEqualToString:@"T1TwitterSwift.TrendsSidebarViewController"] 
+    && is_iPad()) {
+        self.hidden = YES;
+        self.userInteractionEnabled = NO;
+        for (UIView *subview in self.subviews) {
+            subview.hidden = YES;
+        }
+    }
+    if ([BHTManager hideWhoToFollow] 
+    && [self.accessibilityIdentifier isEqualToString:@"T1UserRecommendationsViewController"] 
+    && is_iPad()) {
+        self.hidden = YES;
+        self.userInteractionEnabled = NO;
+        for (UIView *subview in self.subviews) {
+            subview.hidden = YES;
+        }
+    }
+}
+
+%end
+
 %hook T1GuideNavigationController
 - (void)viewDidLayoutSubviews {
     %orig;
