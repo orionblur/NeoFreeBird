@@ -64,6 +64,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "Likes bestätigen";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "Vor dem Liken eines Tweets nachfragen.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "Wasserzeichen auf dem Screenshot ausblenden";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "Entfernt das „X.com“-Wasserzeichen beim Erstellen von Screenshots von Tweets.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "Tweets bestätigen";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Vor dem Posten eines Tweets nachfragen.";
 

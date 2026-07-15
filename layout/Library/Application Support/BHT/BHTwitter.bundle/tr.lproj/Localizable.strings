@@ -64,6 +64,10 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "Beğenileri onayla";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "Tweet’i beğenmeden önce onay iste.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "Ekran görüntüsündeki filigranı gizle";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "Tweetlerin ekran görüntüsünü alırken 'X.com' filigranını kaldırır.";
+
+
 "TWEET_CONFIRM_OPTION_TITLE" = "Tweet atarken sor";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Tweet atmadan önce onay sor.";
 

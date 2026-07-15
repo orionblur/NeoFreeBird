@@ -64,6 +64,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "Confirmar me gusta";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "Pide confirmación antes de dar me gusta.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "Ocultar la marca de agua de la captura de pantalla";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "Elimina la marca de agua «X.com» al hacer capturas de pantalla de tuits.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "Confirmar Tweet";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Pide confirmación antes de publicar.";
 

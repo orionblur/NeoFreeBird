@@ -114,6 +114,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "'마음에 들어요' 확인 창 표시";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "트윗에 '마음에 들어요'를 누르면, 정말 '마음에 들어요'를 할 것인지 다시 확인합니다.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "스크린샷 워터마크 숨기기";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "트윗 스크린샷을 찍을 때 ‘X.com’ 워터마크를 제거합니다.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "트윗 시 확인 창 표시";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "트윗 작성 화면에서 트윗 버튼을 누르면, 정말 트윗할 것인지 다시 확인합니다.";
 

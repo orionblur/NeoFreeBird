@@ -66,6 +66,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "Підтвердження вподобань";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "Питати перед тим, як уподобати твіт.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "Приховати водяний знак на скріншоті";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "Видаляє водяний знак «X.com» під час створення знімків екрана твітів.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "Підтвердження твіту";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Питати перед публікацією твіту.";
 

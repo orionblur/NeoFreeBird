@@ -64,6 +64,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "Confirmer les likes";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "Demande confirmation avant de liker.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "Masquer le filigrane de la capture d'écran";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "Supprime le filigrane « X.com » lors de la capture d'écran de tweets.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "Confirmer les Tweets";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Demande confirmation avant de publier.";
 

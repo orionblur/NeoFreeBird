@@ -114,6 +114,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "いいねの確認";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "ツイートに「いいね」する前に確認ダイアログを表示します。";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "スクリーンショットの透かしを非表示にする";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "ツイートのスクリーンショットを撮る際に、「X.com」の透かしを削除します。";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "ツイートの確認";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "ツイートする前に確認ダイアログを表示します。";
 

@@ -64,6 +64,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "Подтверждение лайка";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "Запрашивать подтверждение перед лайком.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "Скрыть водяной знак на скриншоте";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "Удаляет водяной знак «X.com» при создании скриншотов твитов.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "Подтверждение твита";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Спрашивать перед публикацией твита.";
 

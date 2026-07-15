@@ -64,6 +64,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "Potvrda lajka";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "Zatraži potvrdu prije lajkanja tweeta.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "A képernyőkép vízjelének elrejtése";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "Eltávolítja az „X.com” vízjelet, amikor képernyőképet készítünk a tweetekről.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "Potvrda tweeta";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Zatraži potvrdu prije objave tweeta.";
 

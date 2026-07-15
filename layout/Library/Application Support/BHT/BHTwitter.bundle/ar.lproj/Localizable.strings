@@ -65,6 +65,9 @@
 "LIKE_CONFIRM_OPTION_TITLE" = "تأكيد الإعجابات";
 "LIKE_CONFIRM_OPTION_DETAIL_TITLE" = "طلب تأكيد قبل الإعجاب.";
 
+"HIDE_SCREENSHOT_WATERMARK_OPTION_TITLE" = "إخفاء العلامة المائية من لقطة الشاشة";
+"HIDE_SCREENSHOT_WATERMARK_OPTION_DETAIL_TITLE" = "يزيل العلامة المائية «X.com» عند التقاط لقطات شاشة للتغريدات.";
+
 "TWEET_CONFIRM_OPTION_TITLE" = "تأكيد التغريد";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "طلب تأكيد قبل النشر.";
 
