@@ -5608,7 +5608,7 @@ static BOOL isViewInsideDashHostingController(UIView *view) {
 
 %hook TFNCustomScreenshotContainerView
 - (void)didMoveToWindow {
-    if ([BHTManager hideScreenshotContainer]) {
+    if ([BHTManager hideScreenshotWatermark]) {
         self.hidden = true;
         self.alpha = 0.0;
         self.userInteractionEnabled = false;
@@ -5620,7 +5620,7 @@ static BOOL isViewInsideDashHostingController(UIView *view) {
 
 %hook TUIFollowControlCustomScreenshot
 - (void)didMoveToWindow {
-    if ([BHTManager hideScreenshotContainer]) {
+    if ([BHTManager hideScreenshotWatermark]) {
         self.hidden = true;
         self.alpha = 0.0;
         self.userInteractionEnabled = false;
