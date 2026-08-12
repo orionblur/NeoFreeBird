@@ -498,10 +498,15 @@ static UIColor* tabItemColor(BOOL selected) {
 - (UIView*)titleView {
     UIView* titleView = %orig;
 
-    if ([BHTSettings boolForKey:@"color_twitter_icon_in_top_bar"] &&
-        [titleView isKindOfClass:[UIImageView class]]) {
+    if ([titleView isKindOfClass:[UIImageView class]]) {
         UIImageView* logoView = (UIImageView*)titleView;
-        if (logoView.image) {
+        // Prefer a custom replacement image named "x-logo" in the bundle.
+        UIImage* customLogo = [UIImage imageNamed:@"x-logo"];
+        if (customLogo) {
+            // Show provided logo with original colors.
+            logoView.image = [customLogo imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        } else if ([BHTSettings boolForKey:@"color_twitter_icon_in_top_bar"] && logoView.image) {
+            // Fall back to tinting the existing image (previous behavior).
             logoView.image = [logoView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
             logoView.tintColor = CurrentAccentColor();
         }
