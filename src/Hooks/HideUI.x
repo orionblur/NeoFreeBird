@@ -200,11 +200,6 @@
 
     NSMutableArray* newClasses = [origClasses mutableCopy];
 
-    Class analyticsButtonClass = %c(TTAStatusInlineAnalyticsButton);
-    if (analyticsButtonClass && [BHTSettings boolForKey:@"hide_view_count"]) {
-        [newClasses removeObject:analyticsButtonClass];
-    }
-
     Class bookmarkButtonClass = %c(TTAStatusInlineBookmarkButton);
     if (bookmarkButtonClass && [BHTSettings boolForKey:@"hide_bookmark_button"]) {
         [newClasses removeObject:bookmarkButtonClass];
@@ -215,7 +210,38 @@
         [newClasses removeObject:downvoteButtonClass];
     }
 
+    // Keep the analytics button class present so layout/order remain stable; the
+    // button's visibility is toggled in its own hook below to avoid layout glitches.
+
+    Class downvoteButtonClass = %c(TTAStatusInlineDownvoteButton);
+    if (downvoteButtonClass && [BHTSettings boolForKey:@"hide_downvote_button"]) {
+        [newClasses removeObject:downvoteButtonClass];
+    }
+
     return [newClasses copy];
+}
+
+%end
+
+// Hide the analytics button visually without removing its class (keeps layout).
+%hook TTAStatusInlineAnalyticsButton
+
+- (void)didMoveToWindow {
+    %orig;
+    @try {
+        if ([BHTSettings boolForKey:@"hide_view_count"]) {
+            // Keep the view in the hierarchy so order is unchanged, but render it
+            // invisible and non-interactive to avoid accessibility / layout issues.
+            ((UIView*)self).alpha = 0.0;
+            ((UIView*)self).userInteractionEnabled = NO;
+            ((UIView*)self).accessibilityElementsHidden = YES;
+        } else {
+            ((UIView*)self).alpha = 1.0;
+            ((UIView*)self).userInteractionEnabled = YES;
+            ((UIView*)self).accessibilityElementsHidden = NO;
+        }
+    } @catch (NSException *e) {
+    }
 }
 
 %end

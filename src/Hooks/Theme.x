@@ -336,7 +336,7 @@ static BOOL BHTIsExploreSearchBackgroundView(UIView* view) {
 
 - (void)setBackgroundColor:(UIColor*)color {
     // A nil assignment is the bar hiding its caret -- leave that alone.
-    if (color && [BHTSettings boolForKey:@"tab_bar_theming"]) {
+    if (color && [BHTSettings boolForKey:@"tab_bar_theming"] && [BHTSettings boolForKey:@"enable_custom_tab_bar"]) {
         %orig(CurrentAccentColor());
         return;
     }
@@ -357,6 +357,12 @@ static NSString* scribePageForEntry(id<T1AppNavigationTabEntry> entry) {
 // Operates on the tab ENTRIES, not the button views: the app derives both the
 // buttons and their content view controllers from this one array.
 static NSArray* orderedTabEntries(NSArray* entries) {
+    // Allow disabling the custom tab bar features when they trigger crashes on
+    // certain OS/theme combinations (e.g. Liquid Glass on 11.84).
+    if (![BHTSettings boolForKey:@"enable_custom_tab_bar"]) {
+        return entries;
+    }
+
     // Record the underlying tab views so the editor can show real titles and icons.
     NSMutableArray* tabViews = [NSMutableArray new];
     for (id<T1AppNavigationTabEntry> entry in entries) {
@@ -449,7 +455,7 @@ static UIColor* tabItemColor(BOOL selected) {
     }
 
     updatingTabIconColor = YES;
-    if ([BHTSettings boolForKey:@"tab_bar_theming"]) {
+    if ([BHTSettings boolForKey:@"tab_bar_theming"] && [BHTSettings boolForKey:@"enable_custom_tab_bar"]) {
         self.iconColor = tabItemColor(self.selected);
     } else if (self.iconColor) {
         self.iconColor = nil;
@@ -462,13 +468,13 @@ static UIColor* tabItemColor(BOOL selected) {
 - (void)_t1_updateTitleLabel {
     %orig;
 
-    if ([BHTSettings boolForKey:@"tab_bar_theming"]) {
+    if ([BHTSettings boolForKey:@"tab_bar_theming"] && [BHTSettings boolForKey:@"enable_custom_tab_bar"]) {
         self.titleLabel.textColor = tabItemColor(self.selected);
     }
 }
 
 - (BOOL)showsTitleInDisplayMode:(long long)displayMode {
-    if ([BHTSettings boolForKey:@"restore_tab_labels"]) {
+    if ([BHTSettings boolForKey:@"restore_tab_labels"] && [BHTSettings boolForKey:@"enable_custom_tab_bar"]) {
         return YES;
     }
     return %orig;
@@ -477,7 +483,7 @@ static UIColor* tabItemColor(BOOL selected) {
 - (void)didMoveToWindow {
     %orig;
 
-    if (self.window && [BHTSettings boolForKey:@"restore_tab_labels"] &&
+    if (self.window && [BHTSettings boolForKey:@"restore_tab_labels"] && [BHTSettings boolForKey:@"enable_custom_tab_bar"] &&
         [self respondsToSelector:@selector(_t1_layoutForTabBar)]) {
         [self performSelector:@selector(_t1_layoutForTabBar)];
     }

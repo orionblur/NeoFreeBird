@@ -51,6 +51,8 @@ static NSDictionary<NSString*, NSDictionary*>* BHTSettingsPages(void) {
                         @"action": @"showCustomTabBarVC:",
                         @"type": @"button"
                     },
+                    @{@"key": @"enable_custom_tab_bar",
+                      @"default": @YES},
                     @{@"key": @"tab_bar_theming",
                       @"default": @NO},
                     @{@"key": @"restore_tab_labels",
@@ -79,6 +81,7 @@ static NSDictionary<NSString*, NSDictionary*>* BHTSettingsPages(void) {
                     }
                 ]
             },
+
             @"timelines": @{
                 @"titleKey": @"MODERN_SETTINGS_TIMELINES_TITLE",
                 @"subtitleKey": @"MODERN_SETTINGS_TIMELINES_SUBTITLE",

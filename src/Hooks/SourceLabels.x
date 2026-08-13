@@ -300,6 +300,9 @@ static NSString* encodedQueryParameter(id object) {
         return;
     }
 
+    // Gather identifiers and trigger fetches before letting the system build the
+    // footer; append the resolved source afterwards so it appears after any
+    // supplementary content (like view counts) the system may add.
     @try {
         id viewModel = self.viewModel;
         id status = [viewModel respondsToSelector:@selector(tweet)]
@@ -325,31 +328,55 @@ static NSString* encodedQueryParameter(id object) {
                                          OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             }
 
+            // Trigger a fetch if we haven't seen this tweet yet, but don't mutate
+            // the footer text until after the system's own rebuild below.
             NSString* source = tweetSources[tweetID];
-
             if (source == nil) {
                 tweetSources[tweetID] = @""; // placeholder so we only fetch once
                 [TweetSourceHelper fetchSourceForTweetID:tweetID];
-            } else if (source.length > 0 &&
-                       ![source isEqualToString:[TweetSourceHelper unavailableString]]) {
-                T1ConversationFooterItem* footerItem = self.footerItem;
-                NSString* timeAgo = footerItem.timeAgo;
-
-                if (footerItem && timeAgo.length > 0 &&
-                    ![objc_getAssociatedObject(footerItem, &kSourceAppendedKey) boolValue] &&
-                    ![timeAgo containsString:source]) {
-                    footerItem.timeAgo = [NSString stringWithFormat:@"%@ · %@", timeAgo, source];
-                    objc_setAssociatedObject(footerItem, &kSourceAppendedKey, @(YES),
-                                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-                }
             }
         }
     } @catch (__unused NSException* e) {
     }
 
+    // Let the original implementation build the footer UI first.
     %orig;
 
+    // Now append the resolved source (if available) so it appears after other
+    // footer content such as view counts.
     if ([BHTSettings boolForKey:@"restore_tweet_labels"]) {
+        @try {
+            id viewModel = self.viewModel;
+            id status = [viewModel respondsToSelector:@selector(tweet)]
+                            ? [viewModel performSelector:@selector(tweet)]
+                            : nil;
+
+            NSString* tweetID = nil;
+            if ([status respondsToSelector:@selector(statusID)]) {
+                long long statusID = [(TFNTwitterStatus*)status statusID];
+                if (statusID > 0) tweetID = [NSString stringWithFormat:@"%lld", statusID];
+            }
+
+            if (tweetID.length > 0) {
+                NSString* source = tweetSources[tweetID];
+
+                if (source.length > 0 &&
+                    ![source isEqualToString:[TweetSourceHelper unavailableString]]) {
+                    T1ConversationFooterItem* footerItem = self.footerItem;
+                    NSString* timeAgo = footerItem.timeAgo;
+
+                    if (footerItem && timeAgo.length > 0 &&
+                        ![objc_getAssociatedObject(footerItem, &kSourceAppendedKey) boolValue] &&
+                        ![timeAgo containsString:source]) {
+                        footerItem.timeAgo = [NSString stringWithFormat:@"%@ · %@", timeAgo, source];
+                        objc_setAssociatedObject(footerItem, &kSourceAppendedKey, @(YES),
+                                                 OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                    }
+                }
+            }
+        } @catch (__unused NSException* e) {
+        }
+
         __weak __typeof(self) weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf BHT_forceRecolorSource];

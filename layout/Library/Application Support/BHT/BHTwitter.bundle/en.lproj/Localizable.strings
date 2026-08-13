@@ -205,6 +205,8 @@
 "APP_ICON_TITLE" = "Change app icon";
 
 "CUSTOM_TAB_BAR_OPTION_TITLE" = "Edit navigation bar";
+"ENABLE_CUSTOM_TAB_BAR_TITLE" = "Enable custom navigation";
+"ENABLE_CUSTOM_TAB_BAR_DETAIL" = "Toggle custom navigation features and ordering.";
 
 /*Layout*/
 "HIDE_SPACES_TITLE" = "Hide the Spaces bar";
