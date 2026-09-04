@@ -150,7 +150,7 @@
 "HIDE_TYPING_INDICATOR_DETAIL" = "チャット相手に「入力中」のステータスを送信しないようにします。";
 
 "DOWNLOAD_VOICE_MESSAGES_TITLE" = "ボイスメッセージをダウンロード";
-"DOWNLOAD_VOICE_MESSAGES_DETAIL" = "再生したボイスメッセージを端末に保存します。音声を長押ししてダウンロードできます。";
+"DOWNLOAD_VOICE_MESSAGES_DETAIL" = "ボイスメッセージを再生した後にデバイスに保存します（音声を2本指で長押ししてダウンロードすることもできます）。";
 
 "BLOCK_SCREENSHOT_DETECTION_TITLE" = "スクリーンショット検知をブロック";
 "BLOCK_SCREENSHOT_DETECTION_DETAIL" = "スクリーンショットが検知されることなく、シークレットチャットのスクリーンショットを撮影できるようにします。";
@@ -378,6 +378,8 @@
 "LEGACY_LOGIN_RATE_LIMITED_MESSAGE" = "試行回数が多すぎます。しばらく待ってから再試行するか、ネットワークまたはVPNを変更してください。\n\n詳細:\n%@";
 "LEGACY_LOGIN_UNKNOWN_ERROR" = "不明なエラー";
 
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "メディアをダウンロード";
+
 /* Subscription Keys */
 "SUBSCRIPTION_APP_ICON_SETTINGS_TITLE" = "アプリアイコンを変更";
 "SUBSCRIPTION_APP_ICON_SETTINGS_DETAIL" = "デバイスのホーム画面用にカスタムアプリアイコンを選択します。いつでも変更可能です。";
@@ -388,7 +390,7 @@
 "SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "送信取り消し時間";
 "SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "ツイート送信後、送信取り消しボタンを表示しておく時間を選択します。";
 
-/* 一般的なUI要素と時間選択 */
+/* Common UI Elements & Time Selectors */
 "Off" = "オフ";
 "Cancel" = "キャンセル";
 "5 seconds" = "5秒";
@@ -397,6 +399,6 @@
 "30 seconds" = "30秒";
 "60 seconds" = "60秒";
 
-/* 送信取り消し時間ラベル（TweetsSettingsViewController用に追加） */
+/* Undo Duration Labels (Added for TweetsSettingsViewController) */
 "GENERIC_OFF_LABEL" = "オフ";
 "SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld秒";
