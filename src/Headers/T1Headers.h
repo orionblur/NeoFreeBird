@@ -344,6 +344,7 @@
 @end
 
 @interface _TtC16ChatConversation24ScreenshotProtectionView: UIView
-- (id)initWithFrame:(struct CGRect { struct CGPoint { double x0; double x1; } x0; struct CGSize { double x0; double x1; } x1; })frame;
-- (id)initWithCoder:(id)coder;
+@end
+
+@interface T1AppSplitSideBarViewController : UIViewController
 @end

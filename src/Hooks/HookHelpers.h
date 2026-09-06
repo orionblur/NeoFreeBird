@@ -46,6 +46,9 @@ void applySquareAvatarsSetting(void);
 // Custom theme color re-apply (Theme.x)
 void applySelectedThemeColor(void);
 
+// Dim recolor for the Swift-drawn immersive video controls (Theme.x)
+void BHTApplyDimToVideoControls(UIView* controlsView);
+
 // Live pinned-tabs refresh when the hide setting is toggled (Timeline.x)
 void applyHideCustomTimelinesSetting(void);
 

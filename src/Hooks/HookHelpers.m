@@ -29,6 +29,35 @@ void EnumerateSubviewsRecursively(UIView* view,
     recursionDepth--;
 }
 
+// MARK: - Accent-tinted icon tracking
+
+static NSHashTable<UIView*>* AccentTintedIcons(void) {
+    static NSHashTable* icons;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        icons = [NSHashTable weakObjectsHashTable];
+    });
+    return icons;
+}
+
+void BHTMarkAccentTintedIcon(UIView* view, BOOL tinted) {
+    if (!view)
+        return;
+
+    if (tinted) {
+        [AccentTintedIcons() addObject:view];
+    } else {
+        [AccentTintedIcons() removeObject:view];
+    }
+}
+
+void BHTReapplyAccentTintedIcons(void) {
+    UIColor* accent = CurrentAccentColor();
+    for (UIView* icon in AccentTintedIcons().allObjects) {
+        icon.tintColor = accent;
+    }
+}
+
 // Module content reaches the section arrays wrapped in TFNDataViewItem (the
 // real view model is its -item); standalone timeline items are the view model
 // directly.

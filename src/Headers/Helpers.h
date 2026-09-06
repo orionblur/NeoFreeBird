@@ -89,3 +89,6 @@ static UIViewController* _Nonnull topMostController() {
 
 // Defined in Hooks/BHTHookHelpers.m
 extern UIColor* CurrentAccentColor(void);
+
+extern void BHTMarkAccentTintedIcon(UIView* view, BOOL tinted);
+extern void BHTReapplyAccentTintedIcons(void);

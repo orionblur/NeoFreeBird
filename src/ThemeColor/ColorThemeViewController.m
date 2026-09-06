@@ -129,7 +129,7 @@ static UIColor* NativeAccentColor(NSUInteger option) {
     changeTwitterColor(swatch.colorID);
 
     [self refreshSelection];
-    [self reapplyTabBarAccent];
+    [self reapplyAccentToLiveViews];
 }
 
 
@@ -160,8 +160,9 @@ static void reapplySegmentedCaretAccent(UIView* view) {
     }
 }
 
-// Re-tint the live tab bar icons to the new accent.
-- (void)reapplyTabBarAccent {
+- (void)reapplyAccentToLiveViews {
+    BHTReapplyAccentTintedIcons();
+
     Class t1TabBarVCClass = NSClassFromString(@"T1TabBarViewController");
     if (!t1TabBarVCClass) return;
 

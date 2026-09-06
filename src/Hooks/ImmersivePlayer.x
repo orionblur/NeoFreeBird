@@ -103,6 +103,8 @@ enum {
 - (void)layoutSubviews {
     %orig;
 
+    BHTApplyDimToVideoControls(self);
+
     if (![BHTSettings boolForKey:@"restore_video_timestamp"] ||
         objc_getAssociatedObject(self, kBHTRestoredTimestampKey)) {
         return;
