@@ -368,3 +368,30 @@
 "LEGACY_LOGIN_RATE_LIMITED_TITLE" = "Вероятно, достигнут лимит попыток (243)";
 "LEGACY_LOGIN_RATE_LIMITED_MESSAGE" = "Слишком много попыток. Подождите или смените сеть/VPN, затем попробуйте снова.\n\nПодробности:\n%@";
 "LEGACY_LOGIN_UNKNOWN_ERROR" = "Неизвестная ошибка";
+
+/* Untranslated (en fallback) - TODO: translate */
+"CANCEL_ACTION_LABEL" = "Cancel";
+"CONTINUE_ACTION_LABEL" = "Continue";
+"DONE" = "Done";
+"SAVE" = "Save";
+"SAVE_ACTION_LABEL" = "Save";
+"HIDE_BLOCKED_RETWEETS_TITLE" = "Hide blocked retweets";
+"HIDE_BLOCKED_RETWEETS_DETAIL" = "Hide retweets of accounts who've blocked you.";
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "Download media";
+"SUBSCRIPTION_APP_ICON_SETTINGS_TITLE" = "Change app icon";
+"SUBSCRIPTION_APP_ICON_SETTINGS_DETAIL" = "Choose a custom app icon for your device's home screen. Change it at any time.";
+"SUBSCRIPTION_TAB_CUSTOMIZATION_RESTORE_BUTTON_TITLE" = "Restore to default";
+"Restore to default" = "Restore to default";
+"SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "Undo Duration";
+"SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "Choose how long the undo button will remain after sending a tweet.";
+"Off" = "Off";
+"Cancel" = "Cancel";
+"5 seconds" = "5 seconds";
+"10 seconds" = "10 seconds";
+"20 seconds" = "20 seconds";
+"30 seconds" = "30 seconds";
+"60 seconds" = "60 seconds";
+"GENERIC_OFF_LABEL" = "Off";
+"SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld seconds";
+"PADLOCK_BIOMETRICS_REASON" = "Touch ID or Face ID is required to use Twitter";
+"PADLOCK_PASSCODE_REASON" = "Passcode is required to use Twitter";

@@ -400,3 +400,8 @@
 /* 送信取り消し時間ラベル（TweetsSettingsViewController用に追加） */
 "GENERIC_OFF_LABEL" = "オフ";
 "SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld秒";
+
+/* Untranslated (en fallback) - TODO: translate */
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "Download media";
+"PADLOCK_BIOMETRICS_REASON" = "Touch ID or Face ID is required to use Twitter";
+"PADLOCK_PASSCODE_REASON" = "Passcode is required to use Twitter";
