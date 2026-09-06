@@ -6,6 +6,7 @@
 //
 
 #import "AuthViewController.h"
+#import "Core/BHTBundle.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
 @implementation AuthViewController
@@ -17,13 +18,15 @@
 
     if ([self canEvaluateBiometrics]) {
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                localizedReason:@"Touch ID or Face ID is required to use Twitter"
+                localizedReason:[[BHTBundle sharedBundle]
+                                    localizedStringForKey:@"PADLOCK_BIOMETRICS_REASON"]
                           reply:^(BOOL success, NSError* _Nullable error) {
                               [self finishWithResult:success error:error];
                           }];
     } else if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:nil]) {
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication
-                localizedReason:@"Passcode is required to use Twitter"
+                localizedReason:[[BHTBundle sharedBundle]
+                                    localizedStringForKey:@"PADLOCK_PASSCODE_REASON"]
                           reply:^(BOOL success, NSError* _Nullable error) {
                               [self finishWithResult:success error:error];
                           }];

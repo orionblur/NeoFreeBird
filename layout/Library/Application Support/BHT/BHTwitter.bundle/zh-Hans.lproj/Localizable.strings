@@ -1,5 +1,5 @@
 /*
-  Language: zh_CN
+  Language: zh-Hans
   NeoFreeBird
 */
 
@@ -305,3 +305,96 @@
 "LEGACY_LOGIN_RATE_LIMITED_TITLE" = "Likely rate limited (243)";
 "LEGACY_LOGIN_RATE_LIMITED_MESSAGE" = "Too many attempts. Wait a while or switch network/VPN, then try again.\n\nDetails:\n%@";
 "LEGACY_LOGIN_UNKNOWN_ERROR" = "Unknown error";
+
+/*App lock (biometric/passcode reason)*/
+"PADLOCK_BIOMETRICS_REASON" = "使用 Twitter 需要 Touch ID 或 Face ID";
+"PADLOCK_PASSCODE_REASON" = "使用 Twitter 需要输入密码";
+
+/*Common UI*/
+"CANCEL_ACTION_LABEL" = "取消";
+"CONTINUE_ACTION_LABEL" = "继续";
+"NO_ACTION_LABEL" = "否";
+"YES_ACTION_LABEL" = "是";
+"SAVE_ACTION_LABEL" = "保存";
+"SAVE" = "保存";
+"DONE" = "完成";
+"GENERIC_OFF_LABEL" = "关闭";
+"Off" = "关闭";
+"Cancel" = "取消";
+
+/*Chat*/
+"MODERN_SETTINGS_CHAT_TITLE" = "聊天";
+"MODERN_SETTINGS_CHAT_SUBTITLE" = "为 XChat 界面添加功能。";
+"HIDE_TYPING_INDICATOR_TITLE" = "隐藏正在输入指示";
+"HIDE_TYPING_INDICATOR_DETAIL" = "停止向聊天中的其他人发送“正在输入…”指示。";
+"DOWNLOAD_VOICE_MESSAGES_TITLE" = "下载语音消息";
+"DOWNLOAD_VOICE_MESSAGES_DETAIL" = "播放后将语音消息保存到设备（用两根手指长按音频消息即可下载）。";
+"BLOCK_SCREENSHOT_DETECTION_TITLE" = "阻止截屏检测";
+"BLOCK_SCREENSHOT_DETECTION_DETAIL" = "允许你截屏“安全”聊天而不被阻止。";
+
+/*Profiles*/
+"COPY_PROFILE_INFO_MENU_OPTION_6" = "复制主页链接";
+"COPY_PROFILE_INFO_MENU_OPTION_7" = "复制用户 ID";
+"COPY_PROFILE_INFO_MENU_OPTION_8" = "复制注册日期";
+"FAST_BLOCK_TITLE" = "快速屏蔽/静音";
+"FAST_BLOCK_DETAIL" = "无需确认对话框即可屏蔽或静音账户。";
+"SHOW_UNROUNDED_COUNTS_TITLE" = "显示精确计数";
+"SHOW_UNROUNDED_COUNTS_DETAIL" = "显示关注者、关注中和推文的精确数量，而不是四舍五入到最近的千或百万。";
+
+/*Photos and videos*/
+"DISABLE_MEDIA_CAROUSEL_TITLE" = "禁用媒体轮播";
+"DISABLE_MEDIA_CAROUSEL_DETAIL" = "还原多张媒体附件的全新外观。";
+"DISABLE_VIDEO_DOCKING_TITLE" = "禁用视频停靠";
+"DISABLE_VIDEO_DOCKING_DETAIL" = "防止拖出视频时显示画中画按钮。";
+"TAP_TO_PAUSE_TITLE" = "点击暂停视频";
+"TAP_TO_PAUSE_DETAIL" = "用两根手指点击视频即可暂停，无需使用暂停按钮。";
+"UPLOAD_FULL_HD_VIDEOS_TITLE" = "上传全高清视频";
+"UPLOAD_FULL_HD_VIDEOS_DETAIL" = "解锁上传 1080p 视频的能力。";
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "下载媒体";
+
+/*Timeline*/
+"HIDE_BLOCKED_RETWEETS_TITLE" = "隐藏被屏蔽的转推";
+"HIDE_BLOCKED_RETWEETS_DETAIL" = "隐藏已屏蔽你的账户的转推。";
+"HIDE_VERIFIED_TWEETS_TITLE" = "隐藏认证账户的推文";
+"HIDE_VERIFIED_TWEETS_DETAIL" = "隐藏时间线和回复中来自认证账户的推文，除非作者在同一主题中回复了它们或你关注了该账户。";
+"HIDE_TWEET_BUTTON_TITLE" = "隐藏发推按钮";
+"HIDE_TWEET_BUTTON_DETAIL" = "从导航栏移除“发推”按钮。";
+
+/*Tweets*/
+"SHOW_POLL_RESULTS_TITLE" = "投票前显示投票结果";
+"SHOW_POLL_RESULTS_DETAIL" = "在投票前将投票结果附加到选项名称上，这样你就能看到其他人的投票情况。";
+"SHOW_ACCOUNT_LOCATION_TITLE" = "显示账户位置";
+"SHOW_ACCOUNT_LOCATION_DETAIL" = "在推文页脚显示发布该推文的账户位置。";
+
+/*Source labels*/
+"LOCATION_UNAVAILABLE" = "位置不可用";
+
+/*Dim theme*/
+"ENABLE_DIM_THEME_TITLE" = "启用暗色主题";
+"ENABLE_DIM_THEME_DETAIL" = "恢复 Twitter 已移除的暗色主题。需启用深色模式并重启。";
+"DIM_THEME_RESTART_ALERT_TITLE" = "需要重启";
+"DIM_THEME_RESTART_ALERT_MESSAGE" = "暗色主题需要重启后才能生效。";
+"DIM_THEME_RESTART_ALERT_RESTART_BUTTON" = "重启";
+
+/*Branding*/
+"BLUE_LAUNCH_SCREEN_TITLE" = "恢复蓝色启动画面";
+"BLUE_LAUNCH_SCREEN_DETAIL" = "恢复原始的蓝色启动画面。";
+
+/*Contributors*/
+"CONTRIBUTOR_PAGE_SECTION_HEADER_TITLE" = "贡献者";
+
+/*Subscription*/
+"SUBSCRIPTION_APP_ICON_SETTINGS_TITLE" = "更改应用图标";
+"SUBSCRIPTION_APP_ICON_SETTINGS_DETAIL" = "为设备主屏幕选择自定义应用图标，可随时更改。";
+"SUBSCRIPTION_TAB_CUSTOMIZATION_RESTORE_BUTTON_TITLE" = "恢复默认";
+"SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "撤销时长";
+"SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "选择发送推文后撤销按钮保留的时长。";
+"SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld 秒";
+
+/*Common UI Elements & Time Selectors*/
+"5 seconds" = "5 秒";
+"10 seconds" = "10 秒";
+"20 seconds" = "20 秒";
+"30 seconds" = "30 秒";
+"60 seconds" = "60 秒";
+"Restore to default" = "恢复默认";

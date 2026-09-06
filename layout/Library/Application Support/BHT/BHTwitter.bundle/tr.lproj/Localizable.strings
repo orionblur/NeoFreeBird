@@ -399,3 +399,10 @@
 /* Undo Duration Labels (Added for TweetsSettingsViewController) */
 "GENERIC_OFF_LABEL" = "Kapalı";
 "SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld saniye";
+
+/* Untranslated (en fallback) - TODO: translate */
+"COPY_PROFILE_INFO_MENU_OPTION_7" = "Copy user ID";
+"COPY_PROFILE_INFO_MENU_OPTION_8" = "Copy date joined";
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "Download media";
+"PADLOCK_BIOMETRICS_REASON" = "Touch ID or Face ID is required to use Twitter";
+"PADLOCK_PASSCODE_REASON" = "Passcode is required to use Twitter";

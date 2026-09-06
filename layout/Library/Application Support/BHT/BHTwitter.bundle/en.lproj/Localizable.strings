@@ -402,3 +402,7 @@
 /* Undo Duration Labels (Added for TweetsSettingsViewController) */
 "GENERIC_OFF_LABEL" = "Off";
 "SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld seconds";
+
+/*App lock (biometric/passcode reason)*/
+"PADLOCK_BIOMETRICS_REASON" = "Touch ID or Face ID is required to use Twitter";
+"PADLOCK_PASSCODE_REASON" = "Passcode is required to use Twitter";

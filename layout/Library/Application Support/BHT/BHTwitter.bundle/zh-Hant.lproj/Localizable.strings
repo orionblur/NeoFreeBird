@@ -305,3 +305,96 @@
 "LEGACY_LOGIN_RATE_LIMITED_TITLE" = "Likely rate limited (243)";
 "LEGACY_LOGIN_RATE_LIMITED_MESSAGE" = "Too many attempts. Wait a while or switch network/VPN, then try again.\n\nDetails:\n%@";
 "LEGACY_LOGIN_UNKNOWN_ERROR" = "Unknown error";
+
+/*App lock (biometric/passcode reason)*/
+"PADLOCK_BIOMETRICS_REASON" = "使用 Twitter 需要 Touch ID 或 Face ID";
+"PADLOCK_PASSCODE_REASON" = "使用 Twitter 需要輸入密碼";
+
+/*Common UI*/
+"CANCEL_ACTION_LABEL" = "取消";
+"CONTINUE_ACTION_LABEL" = "繼續";
+"NO_ACTION_LABEL" = "否";
+"YES_ACTION_LABEL" = "是";
+"SAVE_ACTION_LABEL" = "儲存";
+"SAVE" = "儲存";
+"DONE" = "完成";
+"GENERIC_OFF_LABEL" = "關閉";
+"Off" = "關閉";
+"Cancel" = "取消";
+
+/*Chat*/
+"MODERN_SETTINGS_CHAT_TITLE" = "聊天";
+"MODERN_SETTINGS_CHAT_SUBTITLE" = "為 XChat 介面新增功能。";
+"HIDE_TYPING_INDICATOR_TITLE" = "隱藏正在輸入指示";
+"HIDE_TYPING_INDICATOR_DETAIL" = "停止向聊天中的其他人傳送「正在輸入…」指示。";
+"DOWNLOAD_VOICE_MESSAGES_TITLE" = "下載語音訊息";
+"DOWNLOAD_VOICE_MESSAGES_DETAIL" = "播放後將語音訊息儲存到裝置（用兩根手指長按音訊訊息即可下載）。";
+"BLOCK_SCREENSHOT_DETECTION_TITLE" = "阻止截圖偵測";
+"BLOCK_SCREENSHOT_DETECTION_DETAIL" = "允許你截取「安全」聊天內容而不被阻擋。";
+
+/*Profiles*/
+"COPY_PROFILE_INFO_MENU_OPTION_6" = "複製個人檔案網址";
+"COPY_PROFILE_INFO_MENU_OPTION_7" = "複製使用者 ID";
+"COPY_PROFILE_INFO_MENU_OPTION_8" = "複製註冊日期";
+"FAST_BLOCK_TITLE" = "快速封鎖／靜音";
+"FAST_BLOCK_DETAIL" = "無需確認對話框即可封鎖或靜音帳戶。";
+"SHOW_UNROUNDED_COUNTS_TITLE" = "顯示精確計數";
+"SHOW_UNROUNDED_COUNTS_DETAIL" = "顯示追蹤者、追蹤中和貼文的精確數量，而非四捨五入到最近的千或百萬。";
+
+/*Photos and videos*/
+"DISABLE_MEDIA_CAROUSEL_TITLE" = "停用媒體輪播";
+"DISABLE_MEDIA_CAROUSEL_DETAIL" = "還原多張媒體附件的新外觀。";
+"DISABLE_VIDEO_DOCKING_TITLE" = "停用影片停靠";
+"DISABLE_VIDEO_DOCKING_DETAIL" = "防止拖出影片時顯示子母畫面按鈕。";
+"TAP_TO_PAUSE_TITLE" = "點擊暫停影片";
+"TAP_TO_PAUSE_DETAIL" = "用兩根手指點擊影片即可暫停，無需使用暫停按鈕。";
+"UPLOAD_FULL_HD_VIDEOS_TITLE" = "上傳全高清影片";
+"UPLOAD_FULL_HD_VIDEOS_DETAIL" = "解鎖上傳 1080p 影片的能力。";
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "下載媒體";
+
+/*Timeline*/
+"HIDE_BLOCKED_RETWEETS_TITLE" = "隱藏被封鎖的轉推";
+"HIDE_BLOCKED_RETWEETS_DETAIL" = "隱藏已封鎖你的帳戶的轉推。";
+"HIDE_VERIFIED_TWEETS_TITLE" = "隱藏已認證帳戶的貼文";
+"HIDE_VERIFIED_TWEETS_DETAIL" = "隱藏時間軸和回覆中來自已認證帳戶的貼文，除非作者在同一主題中回覆了它們或你追蹤了該帳戶。";
+"HIDE_TWEET_BUTTON_TITLE" = "隱藏發文按鈕";
+"HIDE_TWEET_BUTTON_DETAIL" = "從導覽列移除「發文」按鈕。";
+
+/*Tweets*/
+"SHOW_POLL_RESULTS_TITLE" = "投票前顯示投票結果";
+"SHOW_POLL_RESULTS_DETAIL" = "在投票前將投票結果附加到選項名稱上，讓你能看到其他人的投票狀況。";
+"SHOW_ACCOUNT_LOCATION_TITLE" = "顯示帳戶位置";
+"SHOW_ACCOUNT_LOCATION_DETAIL" = "在貼文頁尾顯示發布該貼文的帳戶位置。";
+
+/*Source labels*/
+"LOCATION_UNAVAILABLE" = "位置無法使用";
+
+/*Dim theme*/
+"ENABLE_DIM_THEME_TITLE" = "啟用暗色主題";
+"ENABLE_DIM_THEME_DETAIL" = "還原 Twitter 已移除的暗色主題。需啟用深色模式並重新啟動。";
+"DIM_THEME_RESTART_ALERT_TITLE" = "需要重新啟動";
+"DIM_THEME_RESTART_ALERT_MESSAGE" = "暗色主題需要重新啟動後才會生效。";
+"DIM_THEME_RESTART_ALERT_RESTART_BUTTON" = "重新啟動";
+
+/*Branding*/
+"BLUE_LAUNCH_SCREEN_TITLE" = "還原藍色啟動畫面";
+"BLUE_LAUNCH_SCREEN_DETAIL" = "還原原始的藍色啟動畫面。";
+
+/*Contributors*/
+"CONTRIBUTOR_PAGE_SECTION_HEADER_TITLE" = "貢獻者";
+
+/*Subscription*/
+"SUBSCRIPTION_APP_ICON_SETTINGS_TITLE" = "更改應用程式圖標";
+"SUBSCRIPTION_APP_ICON_SETTINGS_DETAIL" = "為裝置主畫面選擇自訂應用程式圖標，可隨時更改。";
+"SUBSCRIPTION_TAB_CUSTOMIZATION_RESTORE_BUTTON_TITLE" = "還原為預設";
+"SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "撤銷時間";
+"SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "選擇傳送貼文後撤銷按鈕保留的時間長度。";
+"SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld 秒";
+
+/*Common UI Elements & Time Selectors*/
+"5 seconds" = "5 秒";
+"10 seconds" = "10 秒";
+"20 seconds" = "20 秒";
+"30 seconds" = "30 秒";
+"60 seconds" = "60 秒";
+"Restore to default" = "還原為預設";
