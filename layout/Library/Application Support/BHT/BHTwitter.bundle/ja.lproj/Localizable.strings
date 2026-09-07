@@ -400,3 +400,32 @@
 /* 送信取り消し時間ラベル（TweetsSettingsViewController用に追加） */
 "GENERIC_OFF_LABEL" = "オフ";
 "SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld秒";
+
+/* エンゲージメントスコア (NeoFreeBird — XES) */
+"SHOW_ENGAGEMENT_SCORE_TITLE" = "エンゲージメントスコアを表示";
+"SHOW_ENGAGEMENT_SCORE_DETAIL" = "X の公開ランキング実装 (xai-org/x-algorithm) の重みで計算したスコアを各ポストに表示します。";
+"ENGAGEMENT_SCORE_NAIVE_MODE_TITLE" = "生カウント式を使う";
+"ENGAGEMENT_SCORE_NAIVE_MODE_DETAIL" = "重みを行動率ではなく生の件数に掛けます。X のソース自身が誤りと注意している式で、比較用です。";
+"ENGAGEMENT_SCORE_BIDIRECTIONAL_REPLY_TITLE" = "相互フォローとみなす";
+"ENGAGEMENT_SCORE_BIDIRECTIONAL_REPLY_DETAIL" = "相互フォロー相手への返信に与えられるブーストを適用します (重み 5.0 → 20.0)。";
+"ENGAGEMENT_SCORE_AUTHOR_DIVERSITY_TITLE" = "著者多様性減衰を適用";
+"ENGAGEMENT_SCORE_AUTHOR_DIVERSITY_DETAIL" = "同じ著者の 2 件目以降に (1-0.25)*0.5^k+0.25 を掛けます。本家と同じ式です。";
+"ENGAGEMENT_SCORE_OON_DISCOUNT_TITLE" = "Out-of-Network 割引を適用";
+"ENGAGEMENT_SCORE_OON_DISCOUNT_DETAIL" = "フォローしていないアカウントのポストに掛かる 0.75 倍の割引を適用します。";
+"ENGAGEMENT_SCORE_DEBUG_TITLE" = "スコア取得元をログに出す";
+"ENGAGEMENT_SCORE_DEBUG_DETAIL" = "どのプロパティから件数を読んだかを出力します。バッジに数値が出ないときに使ってください。";
+"ENGAGEMENT_SCORE_BREAKDOWN_TITLE" = "エンゲージメントスコア";
+"ENGAGEMENT_SCORE_NO_VIEWS" = "表示数なし";
+"ENGAGEMENT_SCORE_VIEWS" = "表示";
+"ENGAGEMENT_SCORE_PROBABILITY" = "確率近似スコア";
+"ENGAGEMENT_SCORE_NAIVE" = "生カウント式";
+"ENGAGEMENT_SCORE_DIVERSITY" = "著者多様性";
+"ENGAGEMENT_SCORE_OON" = "Out-of-Network";
+"ENGAGEMENT_SCORE_PERCENTILE" = "上位";
+"ENGAGEMENT_SCORE_OK" = "OK";
+"ENGAGEMENT_SCORE_ACTION_FAVORITE" = "いいね";
+"ENGAGEMENT_SCORE_ACTION_REPLY" = "返信";
+"ENGAGEMENT_SCORE_ACTION_RETWEET" = "リポスト";
+"ENGAGEMENT_SCORE_ACTION_QUOTE" = "引用";
+"ENGAGEMENT_SCORE_ACTION_BOOKMARK" = "ブックマーク";
+"ENGAGEMENT_SCORE_FOOTNOTE" = "スコア = Σ 重み × P(行動)。P は「行動数 ÷ 表示数」で近似しています。重みは xai-org/x-algorithm の既定値で、本家の P は Phoenix が閲覧者ごとに推論するため、この値は平均的な閲覧者に対する近似です。";

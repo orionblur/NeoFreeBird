@@ -402,3 +402,32 @@
 /* Undo Duration Labels (Added for TweetsSettingsViewController) */
 "GENERIC_OFF_LABEL" = "Off";
 "SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld seconds";
+
+/* Engagement score (NeoFreeBird — XES) */
+"SHOW_ENGAGEMENT_SCORE_TITLE" = "Show engagement score";
+"SHOW_ENGAGEMENT_SCORE_DETAIL" = "Adds a small badge to each post, scored with the weights from X's open-source ranker (xai-org/x-algorithm).";
+"ENGAGEMENT_SCORE_NAIVE_MODE_TITLE" = "Use raw-count formula";
+"ENGAGEMENT_SCORE_NAIVE_MODE_DETAIL" = "Multiplies weights by raw counts instead of action rates. X's own source calls this reading incorrect; kept for comparison.";
+"ENGAGEMENT_SCORE_BIDIRECTIONAL_REPLY_TITLE" = "Assume mutual follow";
+"ENGAGEMENT_SCORE_BIDIRECTIONAL_REPLY_DETAIL" = "Applies the reply boost the ranker gives mutuals (weight 5.0 becomes 20.0).";
+"ENGAGEMENT_SCORE_AUTHOR_DIVERSITY_TITLE" = "Apply author diversity decay";
+"ENGAGEMENT_SCORE_AUTHOR_DIVERSITY_DETAIL" = "Each further post by the same author is multiplied by (1-0.25)*0.5^k+0.25, as the ranker does.";
+"ENGAGEMENT_SCORE_OON_DISCOUNT_TITLE" = "Apply out-of-network discount";
+"ENGAGEMENT_SCORE_OON_DISCOUNT_DETAIL" = "Multiplies the score by 0.75, the discount applied to posts from accounts you don't follow.";
+"ENGAGEMENT_SCORE_DEBUG_TITLE" = "Log engagement score lookups";
+"ENGAGEMENT_SCORE_DEBUG_DETAIL" = "Prints which model properties the score was read from. Use this if badges show no data.";
+"ENGAGEMENT_SCORE_BREAKDOWN_TITLE" = "Engagement score";
+"ENGAGEMENT_SCORE_NO_VIEWS" = "No view count";
+"ENGAGEMENT_SCORE_VIEWS" = "Views";
+"ENGAGEMENT_SCORE_PROBABILITY" = "Rate-based score";
+"ENGAGEMENT_SCORE_NAIVE" = "Raw-count formula";
+"ENGAGEMENT_SCORE_DIVERSITY" = "Author diversity";
+"ENGAGEMENT_SCORE_OON" = "Out-of-network";
+"ENGAGEMENT_SCORE_PERCENTILE" = "Top";
+"ENGAGEMENT_SCORE_OK" = "OK";
+"ENGAGEMENT_SCORE_ACTION_FAVORITE" = "Likes";
+"ENGAGEMENT_SCORE_ACTION_REPLY" = "Replies";
+"ENGAGEMENT_SCORE_ACTION_RETWEET" = "Reposts";
+"ENGAGEMENT_SCORE_ACTION_QUOTE" = "Quotes";
+"ENGAGEMENT_SCORE_ACTION_BOOKMARK" = "Bookmarks";
+"ENGAGEMENT_SCORE_FOOTNOTE" = "Score = sum of weight x P(action), with P approximated by count/views. Weights are the defaults from xai-org/x-algorithm; the real P is inferred per viewer by Phoenix, so this is an approximation for an average viewer.";

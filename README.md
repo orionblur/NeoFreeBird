@@ -52,6 +52,15 @@
 |<img width="1604" alt="Screenshot 4" src="images/settings/settings10.png">|<img width="1604" alt="Screenshot 5" src="images/settings/settings11.png">|<img width="1604" alt="Screenshot 6" src="images/settings/settings12.png">|
 |<img width="1604" alt="Screenshot 4" src="images/settings/settings13.png">|<img width="1604" alt="Screenshot 5" src="images/settings/settings14.png">|<img width="1604" alt="Screenshot 6" src="images/settings/settings15.png">|
 
+## Engagement Score (this fork)
+
+各ポストに、X の公開ランキング実装 ([xai-org/x-algorithm](https://github.com/xai-org/x-algorithm), Apache-2.0)
+の重みで計算した推定エンゲージメントスコアを表示します。
+`Final Score = Σ (weight × P(action))` の `P` を「行動数 ÷ 表示数」で近似したものです。
+
+設定 → ツイート → 「エンゲージメントスコアを表示」で有効化します。
+仕組み・制約・検証方法は [docs/ENGAGEMENT_SCORE.md](docs/ENGAGEMENT_SCORE.md) を参照してください。
+
 # Downloading
 Go to the [Releases](https://github.com/orionblur/NeoFreeBird/releases) page to download the latest version of NeoFreeBird-BHTwitter. You can also build it yourself by following the instructions below.
 

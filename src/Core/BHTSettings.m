@@ -323,6 +323,35 @@ static NSDictionary<NSString*, NSDictionary*>* BHTSettingsPages(void) {
                         @"type": @"toggle"
                     },
                     @{
+                        @"key": @"show_engagement_score",
+                        @"default": @NO,
+                        @"type": @"toggle"
+                    },
+                    @{
+                        @"key": @"engagement_score_naive_mode",
+                        @"parentKey": @"show_engagement_score",
+                        @"default": @NO,
+                        @"type": @"toggle"
+                    },
+                    @{
+                        @"key": @"engagement_score_bidirectional_reply",
+                        @"parentKey": @"show_engagement_score",
+                        @"default": @NO,
+                        @"type": @"toggle"
+                    },
+                    @{
+                        @"key": @"engagement_score_author_diversity",
+                        @"parentKey": @"show_engagement_score",
+                        @"default": @NO,
+                        @"type": @"toggle"
+                    },
+                    @{
+                        @"key": @"engagement_score_oon_discount",
+                        @"parentKey": @"show_engagement_score",
+                        @"default": @NO,
+                        @"type": @"toggle"
+                    },
+                    @{
                         @"key": @"restore_tweet_labels",
                         @"default": @NO,
                         @"type": @"toggle"
@@ -406,6 +435,9 @@ static NSDictionary<NSString*, NSDictionary*>* BHTSettingsPages(void) {
                 @"subtitleKey": @"MODERN_SETTINGS_DEBUG_SUBTITLE",
                 @"settings": @[
                     @{@"key": @"flex_twitter",
+                      @"default": @NO,
+                      @"type": @"toggle"},
+                    @{@"key": @"engagement_score_debug",
                       @"default": @NO,
                       @"type": @"toggle"}
                 ]
