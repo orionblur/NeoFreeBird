@@ -17,7 +17,7 @@
 "DONE" = "完了";
 "SAVE" = "保存";
 "SAVE_ACTION_LABEL" = "保存";
-
+"OK_ACTION_LABEL" = "OK";
 
 /*Settings*/
 "MODERN_SETTINGS_LAYOUT_TITLE" = "一般";
@@ -71,6 +71,9 @@
 "HIDE_WHO_TO_FOLLOW_TITLE" = "「おすすめアカウント」を非表示";
 "HIDE_WHO_TO_FOLLOW_DETAIL" = "フォロー候補として表示されるアカウントを非表示にします。";
 
+"NO_FOCUS_LOST_TITLE" = "フォーカスを失わない";
+"NO_FOCUS_LOST_DETAIL" = "別のアプリに切り替えたことをTwitterが検知するのをブロックするため、スレッド内で読んでいた位置を見失うことがなくなります。";
+
 "HIDE_TIMELINE_PROMPTS_TITLE" = "タイムラインの案内を非表示";
 "HIDE_TIMELINE_PROMPTS_DETAIL" = "「連絡先を追加」などの案内バナーを非表示にします。";
 
@@ -94,6 +97,9 @@
 
 "LIKE_CONFIRM_TITLE" = "「いいね」を確認";
 "LIKE_CONFIRM_DETAIL" = "ポストに「いいね」をする前に確認ダイアログを表示します。";
+
+"USE_TENOR_GIFS_TITLE" = "TenorのGIFを使用する";
+"USE_TENOR_GIFS_DETAIL" = "TwitterのGIF（GIPHY）の代わりにTenorを使用します。Tenorのほうが選択肢が豊富です。";
 
 "TWEET_CONFIRM_TITLE" = "ポストを確認";
 "TWEET_CONFIRM_DETAIL" = "ポストする前に確認ダイアログを表示します。";
@@ -214,6 +220,9 @@
 
 "DOWNLOAD_VIDEOS_TITLE" = "メディアをダウンロード";
 "DOWNLOAD_VIDEOS_DETAIL" = "ポストに含まれる動画やGIFを直接保存できます。";
+
+"DOWNLOAD_HIGHEST_QUALITY_TITLE" = "常に最高画質でダウンロード";
+"DOWNLOAD_HIGHEST_QUALITY_DETAIL" = "画質の選択画面をスキップして、最高画質のMP4をすぐに保存します。";
 
 "UPLOAD_FULL_HD_VIDEOS_TITLE" = "フルHD動画をアップロード";
 "UPLOAD_FULL_HD_VIDEOS_DETAIL" = "1080pで動画をアップロードできるようにします。";
@@ -363,6 +372,10 @@
 "LEGACY_LOGIN_VERIFYING_STATUS" = "確認中…";
 "LEGACY_LOGIN_SIGNING_IN_STATUS" = "ログイン中…";
 "LEGACY_LOGIN_UNAVAILABLE_TITLE" = "利用できません";
+"PHONE_OR_EMAIL_OR_USERNAME_LABEL" = "電話番号、メールアドレス、またはユーザー名";
+"PASSWORD_LABEL" = "パスワード";
+"LOG_IN_ACTION_LABEL" = "ログイン";
+"LOG_IN_TITLE" = "ログイン";
 "LEGACY_LOGIN_CLASSES_MISSING_MESSAGE" = "ログインに必要なクラスが見つかりません。";
 "LEGACY_LOGIN_BUILD_COMMAND_FAILED_MESSAGE" = "コマンドを構築できませんでした。";
 "LEGACY_LOGIN_CRASH_AVOIDED_TITLE" = "クラッシュを回避しました";
@@ -390,6 +403,26 @@
 
 "SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "送信取り消し時間";
 "SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "ツイート送信後、送信取り消しボタンを表示しておく時間を選択します。";
+
+/* Presets — settings import and export */
+"SETTINGS_EXPORT_TITLE" = "設定のエクスポート";
+"SETTINGS_IMPORT_TITLE" = "設定のインポート";
+
+"SETTINGS_EXPORT_FAILED_TITLE" = "エクスポートに失敗しました";
+"SETTINGS_EXPORT_WRITE_FAILED" = "設定ファイルを作成できませんでした。";
+
+"SETTINGS_IMPORT_CONFIRM_TITLE" = "設定をインポートしますか？";
+"SETTINGS_IMPORT_CONFIRM_MESSAGE" = "現在の NeoFreeBird の設定が置き換えられます。";
+"SETTINGS_IMPORT_CONFIRM_BUTTON" = "ファイルを選択";
+"SETTINGS_IMPORT_FAILED_TITLE" = "インポートに失敗しました";
+"SETTINGS_IMPORT_SUCCESS_TITLE" = "設定をインポートしました";
+"SETTINGS_IMPORT_SUCCESS_MESSAGE" = "%ld件の設定が適用されました。すべての変更を有効にするにはアプリを再起動してください。";
+"SETTINGS_IMPORT_RESTART_BUTTON" = "再起動";
+"SETTINGS_IMPORT_LATER_BUTTON" = "あとで";
+
+"SETTINGS_TRANSFER_UNREADABLE_FILE" = "ファイルを読み込めませんでした。";
+"SETTINGS_TRANSFER_MALFORMED_FILE" = "このファイルは NeoFreeBird の設定エクスポートファイルではありません。";
+"SETTINGS_TRANSFER_NO_SETTINGS" = "このファイルには、このバージョンで認識できる設定が含まれていませんでした。";
 
 /* Common UI Elements & Time Selectors */
 "Off" = "オフ";
