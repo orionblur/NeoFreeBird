@@ -247,7 +247,7 @@
 
 /*Tab bar*/
 "CUSTOM_TAB_BAR_SETTINGS_NAVIGATION_TITLE" = "自訂功能標籤列";
-"CUSTOM_TAB_BAR_GRID_DETAIL" = "Tap a destination to add or remove it. Drag the bar below to reorder.";
+"CUSTOM_TAB_BAR_GRID_DETAIL" = "點按目的地可新增或移除。拖曳下方列可重新排序。";
 "CUSTOM_TAB_BAR_RESET_MESSAGE" = "您確定要將導覽列恢復為預設狀態嗎？";
 
 /* Restore tab labels */
@@ -271,37 +271,174 @@
 "SOURCE_UNAVAILABLE" = "來源無法使用";
 
 /*App lock*/
-"PADLOCK_LOCKED_LABEL" = "Locked";
+"PADLOCK_LOCKED_LABEL" = "已鎖定";
 
 /*Source labels*/
-"UNKNOWN_SOURCE" = "Unknown Source";
+"UNKNOWN_SOURCE" = "未知來源";
 
 /*Media downloads*/
-"DOWNLOAD_VIDEO_NUMBER_TITLE" = "Video %lu";
-"UNKNOWN_ERROR" = "An unknown error occurred.";
+"DOWNLOAD_VIDEO_NUMBER_TITLE" = "影片 %lu";
+"UNKNOWN_ERROR" = "發生未知錯誤。";
 
 /*Custom fonts*/
-"INSTALL_IFONT_BUTTON_TITLE" = "iFont application";
-"FONT_SYSTEM_DEFAULT_SUBTITLE" = "System Default";
+"INSTALL_IFONT_BUTTON_TITLE" = "iFont 應用程式";
+"FONT_SYSTEM_DEFAULT_SUBTITLE" = "系統預設";
 
 /*Legacy login*/
-"LEGACY_LOGIN_INFO_LABEL" = "Log in with your username and password.\n\nGoogle and Apple sign-in aren't supported. If your account uses one of those, add a password to it first.";
-"LEGACY_LOGIN_MISSING_INPUT_TITLE" = "Missing input";
-"LEGACY_LOGIN_MISSING_INPUT_MESSAGE" = "Enter username and password.";
-"LEGACY_LOGIN_VERIFYING_STATUS" = "Verifying…";
-"LEGACY_LOGIN_SIGNING_IN_STATUS" = "Signing in…";
-"LEGACY_LOGIN_UNAVAILABLE_TITLE" = "Unavailable";
-"LEGACY_LOGIN_CLASSES_MISSING_MESSAGE" = "Login classes missing.";
-"LEGACY_LOGIN_BUILD_COMMAND_FAILED_MESSAGE" = "Could not build command.";
-"LEGACY_LOGIN_CRASH_AVOIDED_TITLE" = "Crash avoided";
-"LEGACY_LOGIN_UNEXPECTED_RESPONSE_TITLE" = "Unexpected response";
-"LEGACY_LOGIN_NO_TOKEN_NO_CHALLENGE_MESSAGE" = "No token and no challenge.";
-"LEGACY_LOGIN_CHALLENGE_MISSING_INFO_MESSAGE" = "Challenge is missing its request id or URL.";
-"LEGACY_LOGIN_CHALLENGE_CLASSES_MISSING_MESSAGE" = "Challenge/host classes missing.";
-"LEGACY_LOGIN_BUILD_CHALLENGE_FAILED_MESSAGE" = "Could not build challenge.";
-"LEGACY_LOGIN_NO_TOKEN_MESSAGE" = "No token in response.";
-"LEGACY_LOGIN_FAILED_TITLE" = "Login failed";
-"LEGACY_LOGIN_NO_ACCOUNT_MESSAGE" = "No account was returned.";
-"LEGACY_LOGIN_RATE_LIMITED_TITLE" = "Likely rate limited (243)";
-"LEGACY_LOGIN_RATE_LIMITED_MESSAGE" = "Too many attempts. Wait a while or switch network/VPN, then try again.\n\nDetails:\n%@";
-"LEGACY_LOGIN_UNKNOWN_ERROR" = "Unknown error";
+"LEGACY_LOGIN_INFO_LABEL" = "使用使用者名稱和密碼登入。\n\n不支援 Google 和 Apple 登入。如果你的帳號使用其中之一，請先為其設定密碼。";
+"LEGACY_LOGIN_MISSING_INPUT_TITLE" = "缺少輸入";
+"LEGACY_LOGIN_MISSING_INPUT_MESSAGE" = "請輸入使用者名稱和密碼。";
+"LEGACY_LOGIN_VERIFYING_STATUS" = "驗證中…";
+"LEGACY_LOGIN_SIGNING_IN_STATUS" = "登入中…";
+"LEGACY_LOGIN_UNAVAILABLE_TITLE" = "無法使用";
+"PHONE_OR_EMAIL_OR_USERNAME_LABEL" = "電話號碼、電子郵件或使用者名稱";
+"PASSWORD_LABEL" = "密碼";
+"LOG_IN_ACTION_LABEL" = "登入";
+"LOG_IN_TITLE" = "登入";
+"LEGACY_LOGIN_CLASSES_MISSING_MESSAGE" = "缺少登入相關類別。";
+"LEGACY_LOGIN_BUILD_COMMAND_FAILED_MESSAGE" = "無法建立指令。";
+"LEGACY_LOGIN_CRASH_AVOIDED_TITLE" = "已避免當機";
+"LEGACY_LOGIN_UNEXPECTED_RESPONSE_TITLE" = "意外的回應";
+"LEGACY_LOGIN_NO_TOKEN_NO_CHALLENGE_MESSAGE" = "既沒有權杖也沒有驗證挑戰。";
+"LEGACY_LOGIN_CHALLENGE_MISSING_INFO_MESSAGE" = "驗證挑戰缺少請求 ID 或 URL。";
+"LEGACY_LOGIN_CHALLENGE_CLASSES_MISSING_MESSAGE" = "缺少驗證挑戰/主機相關類別。";
+"LEGACY_LOGIN_BUILD_CHALLENGE_FAILED_MESSAGE" = "無法建立驗證挑戰。";
+"LEGACY_LOGIN_NO_TOKEN_MESSAGE" = "回應中沒有權杖。";
+"LEGACY_LOGIN_FAILED_TITLE" = "登入失敗";
+"LEGACY_LOGIN_NO_ACCOUNT_MESSAGE" = "未傳回任何帳號。";
+"LEGACY_LOGIN_RATE_LIMITED_TITLE" = "可能觸發了速率限制（243）";
+"LEGACY_LOGIN_RATE_LIMITED_MESSAGE" = "嘗試次數過多。請稍後再試，或更換網路/VPN。\n\n詳情：\n%@";
+"LEGACY_LOGIN_UNKNOWN_ERROR" = "未知錯誤";
+
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "下載媒體";
+"DOWNLOAD_LIVE_ACTIVITY_DOWNLOADING" = "下載中";
+
+/*Subscription Keys*/
+"SUBSCRIPTION_APP_ICON_SETTINGS_TITLE" = "更換 App 圖示";
+"SUBSCRIPTION_APP_ICON_SETTINGS_DETAIL" = "為裝置主畫面選擇自訂 App 圖示。隨時可以變更。";
+
+"SUBSCRIPTION_TAB_CUSTOMIZATION_RESTORE_BUTTON_TITLE" = "還原預設";
+"Restore to default" = "還原預設";
+
+"SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "撤銷時長";
+"SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "選擇發送推文後撤銷按鈕保留的時間。";
+
+/*Presets — settings import and export*/
+"SETTINGS_EXPORT_TITLE" = "匯出設定";
+"SETTINGS_IMPORT_TITLE" = "匯入設定";
+
+"SETTINGS_EXPORT_FAILED_TITLE" = "匯出失敗";
+"SETTINGS_EXPORT_WRITE_FAILED" = "無法建立設定檔案。";
+
+"SETTINGS_IMPORT_CONFIRM_TITLE" = "匯入設定？";
+"SETTINGS_IMPORT_CONFIRM_MESSAGE" = "你目前的 NeoFreeBird 設定將被所選檔案中的設定取代。";
+"SETTINGS_IMPORT_CONFIRM_BUTTON" = "選擇檔案";
+"SETTINGS_IMPORT_FAILED_TITLE" = "匯入失敗";
+"SETTINGS_IMPORT_SUCCESS_TITLE" = "設定已匯入";
+"SETTINGS_IMPORT_SUCCESS_MESSAGE" = "已套用 %ld 項設定。重新啟動應用程式使所有設定生效。";
+"SETTINGS_IMPORT_RESTART_BUTTON" = "重新啟動";
+"SETTINGS_IMPORT_LATER_BUTTON" = "稍後";
+
+"SETTINGS_TRANSFER_UNREADABLE_FILE" = "無法讀取該檔案。";
+"SETTINGS_TRANSFER_MALFORMED_FILE" = "該檔案不是 NeoFreeBird 設定匯出檔案。";
+"SETTINGS_TRANSFER_NO_SETTINGS" = "該檔案不包含此版本可識別的設定。";
+
+/*Common UI Elements & Time Selectors*/
+"Off" = "關閉";
+"Cancel" = "取消";
+"5 seconds" = "5 秒";
+"10 seconds" = "10 秒";
+"20 seconds" = "20 秒";
+"30 seconds" = "30 秒";
+"60 seconds" = "60 秒";
+"GENERIC_OFF_LABEL" = "關閉";
+"SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld 秒";
+
+/*Common actions*/
+"YES_ACTION_LABEL" = "是";
+"NO_ACTION_LABEL" = "否";
+"CANCEL_ACTION_LABEL" = "取消";
+"CONTINUE_ACTION_LABEL" = "繼續";
+"DONE" = "完成";
+"SAVE" = "儲存";
+"SAVE_ACTION_LABEL" = "儲存";
+"OK_ACTION_LABEL" = "確定";
+
+/*Chat*/
+"MODERN_SETTINGS_CHAT_TITLE" = "聊天";
+"MODERN_SETTINGS_CHAT_SUBTITLE" = "為 XChat 介面添加功能。";
+
+"HIDE_TYPING_INDICATOR_TITLE" = "隱藏正在輸入指示器";
+"HIDE_TYPING_INDICATOR_DETAIL" = "停止向聊天中的其他人傳送「正在輸入…」指示器。";
+
+"DOWNLOAD_VOICE_MESSAGES_TITLE" = "下載語音訊息";
+"DOWNLOAD_VOICE_MESSAGES_DETAIL" = "播放後可將語音訊息儲存到裝置（用兩根手指長按音訊訊息即可下載）。";
+
+"BLOCK_SCREENSHOT_DETECTION_TITLE" = "阻止截圖偵測";
+"BLOCK_SCREENSHOT_DETECTION_DETAIL" = "允許你對「私密」聊天進行截圖而不會被阻止。";
+
+/*General*/
+"NO_FOCUS_LOST_TITLE" = "不遺失焦點";
+"NO_FOCUS_LOST_DETAIL" = "阻止 Twitter 偵測到你切換到其他應用程式，這樣你就不會在討論串中遺失位置。";
+
+"HIDE_BLOCKED_RETWEETS_TITLE" = "隱藏被封鎖帳號的轉推";
+"HIDE_BLOCKED_RETWEETS_DETAIL" = "隱藏封鎖你的帳號所發出的轉推。";
+
+/*Tweets*/
+"USE_TENOR_GIFS_TITLE" = "使用 Tenor GIF";
+"USE_TENOR_GIFS_DETAIL" = "使用 Tenor GIF 取代 Twitter 的 GIF（GIPHY）。Tenor 有更多選擇。";
+
+"SHOW_POLL_RESULTS_TITLE" = "投票前顯示投票結果";
+"SHOW_POLL_RESULTS_DETAIL" = "在投票前將投票結果附加到選項名稱中，讓你知道其他人的投票情況。";
+
+"SHOW_ACCOUNT_LOCATION_TITLE" = "顯示帳號位置";
+"SHOW_ACCOUNT_LOCATION_DETAIL" = "在推文頁腳顯示發布該推文的帳號位置。";
+
+"DISABLE_MEDIA_CAROUSEL_TITLE" = "停用媒體輪播";
+"DISABLE_MEDIA_CAROUSEL_DETAIL" = "回復多個媒體附件原本的顯示方式。";
+
+/*Profiles*/
+"FAST_BLOCK_TITLE" = "快速封鎖/靜音";
+"FAST_BLOCK_DETAIL" = "無需確認對話框即可封鎖或靜音帳號。";
+
+"SHOW_UNROUNDED_COUNTS_TITLE" = "顯示精確計數";
+"SHOW_UNROUNDED_COUNTS_DETAIL" = "顯示粉絲、跟隨和推文的精確數字，而不是四捨五入到最接近的千或百萬。";
+
+/*Photos and Videos*/
+"TAP_TO_PAUSE_TITLE" = "點按暫停影片";
+"TAP_TO_PAUSE_DETAIL" = "用兩根手指點按影片即可暫停，而無需使用暫停按鈕。";
+
+"DISABLE_VIDEO_DOCKING_TITLE" = "停用影片停靠";
+"DISABLE_VIDEO_DOCKING_DETAIL" = "拖動影片時不再顯示子母畫面按鈕。";
+
+/*Twitter Blue*/
+"DOWNLOAD_HIGHEST_QUALITY_TITLE" = "一律下載最高畫質";
+"DOWNLOAD_HIGHEST_QUALITY_DETAIL" = "跳過畫質選擇器，直接儲存最佳的 MP4。";
+
+"UPLOAD_FULL_HD_VIDEOS_TITLE" = "上傳全高畫質影片";
+"UPLOAD_FULL_HD_VIDEOS_DETAIL" = "解鎖以 1080p 上傳影片的能力。";
+
+/*Copy profile info*/
+"COPY_PROFILE_INFO_MENU_OPTION_6" = "複製個人檔案連結";
+"COPY_PROFILE_INFO_MENU_OPTION_7" = "複製使用者 ID";
+"COPY_PROFILE_INFO_MENU_OPTION_8" = "複製加入日期";
+
+/*Launch & Dim theme*/
+"BLUE_LAUNCH_SCREEN_TITLE" = "還原藍色啟動畫面";
+"BLUE_LAUNCH_SCREEN_DETAIL" = "還原原本的藍色啟動畫面。";
+
+"ENABLE_DIM_THEME_TITLE" = "啟用暗色主題";
+"ENABLE_DIM_THEME_DETAIL" = "還原被移除的 Twitter 暗色主題。需要啟用深色模式並重新啟動。";
+"DIM_THEME_RESTART_ALERT_TITLE" = "需要重新啟動";
+"DIM_THEME_RESTART_ALERT_MESSAGE" = "暗色主題需要重新啟動才能生效。";
+"DIM_THEME_RESTART_ALERT_RESTART_BUTTON" = "重新啟動";
+
+"HIDE_VERIFIED_TWEETS_TITLE" = "隱藏已驗證帳號的推文";
+"HIDE_VERIFIED_TWEETS_DETAIL" = "在時間軸和回覆中隱藏已驗證帳號的推文，除非作者在同一討論串中回覆了他們或你追蹤了該帳號。";
+
+"HIDE_TWEET_BUTTON_TITLE" = "隱藏發文按鈕";
+"HIDE_TWEET_BUTTON_DETAIL" = "從導覽列中移除發文按鈕。";
+
+/*Misc*/
+"LOCATION_UNAVAILABLE" = "位置無法使用";
+"CONTRIBUTOR_PAGE_SECTION_HEADER_TITLE" = "貢獻者";
