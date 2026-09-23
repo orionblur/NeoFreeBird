@@ -18,10 +18,9 @@ renaming at all.
 "yeniden gönderiler" = "retweetler";
 "yeniden gönderildi" = "retweetlendi";
 "yeniden gönderiliyor" = "retweetleniyor";
-"gönder" = "tweetle";
-"gönderi" = "Tweet";
-"gönderiler" = "Tweetler";
-"gönderildi" = "Tweetlendi";
-"gönderiliyor" = "Tweetleniyor";
+"gönderi" = "tweetle";
+"gönderiler" = "tweetler";
+"gönderildi" = "tweetlendi";
+"gönderiliyor" = "tweetleniyor";
 "premium" = "Blue";
 "X" = "Twitter";
