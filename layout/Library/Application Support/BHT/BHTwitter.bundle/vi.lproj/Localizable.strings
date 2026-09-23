@@ -1,0 +1,439 @@
+/*
+  Language: vi
+  NeoFreeBird
+*/
+
+"NFB_SETTINGS_TITLE" = "NeoFreeBird";
+"NFB_SETTINGS_DETAIL" = "Tùy chỉnh Twitter của bạn. Ẩn quảng cáo, bật tính năng Blue và nhiều hơn thế nữa.";
+
+/*Alerts and popups*/
+
+"CONFIRM_ALERT_MESSAGE" = "Bạn có chắc chắn muốn thực hiện hành động này không?";
+
+"YES_ACTION_LABEL" = "Có";
+"NO_ACTION_LABEL" = "Không";
+"CANCEL_ACTION_LABEL" = "Hủy";
+"CONTINUE_ACTION_LABEL" = "Tiếp tục";
+"DONE" = "Xong";
+"SAVE" = "Lưu";
+"SAVE_ACTION_LABEL" = "Lưu";
+"OK_ACTION_LABEL" = "OK";
+
+
+/*Settings*/
+"MODERN_SETTINGS_LAYOUT_TITLE" = "Cài đặt chung";
+"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "Khóa ứng dụng, giữ thanh điều hướng luôn hiện và nhiều tùy chỉnh khác.";
+
+"MODERN_SETTINGS_MEDIA_TITLE" = "Hình ảnh & Video";
+"MODERN_SETTINGS_MEDIA_SUBTITLE" = "Tải video, bật mốc thời gian video và nhiều hơn thế.";
+
+"MODERN_SETTINGS_APPEARANCE_TITLE" = "Giao diện";
+"MODERN_SETTINGS_APPEARANCE_SUBTITLE" = "Biến Twitter thành của riêng bạn với chủ đề, biểu tượng ứng dụng, phông chữ tùy chỉnh.";
+
+"MODERN_SETTINGS_TIMELINES_TITLE" = "Bảng tin";
+"MODERN_SETTINGS_TIMELINES_SUBTITLE" = "Làm sạch bảng tin bằng cách ẩn quảng cáo và các gợi ý rườm rà.";
+
+"MODERN_SETTINGS_GROK_TITLE" = "Grok";
+"MODERN_SETTINGS_GROK_SUBTITLE" = "Ẩn các nút Grok và quản lý tự động dịch.";
+
+"MODERN_SETTINGS_PROFILES_TITLE" = "Trang cá nhân";
+"MODERN_SETTINGS_PROFILES_SUBTITLE" = "Tùy chỉnh những gì hiển thị trên trang cá nhân người dùng.";
+
+"MODERN_SETTINGS_TWEETS_TITLE" = "Tweet & Phản hồi";
+"MODERN_SETTINGS_TWEETS_SUBTITLE" = "Thay đổi giao diện Tweet và loại bỏ các tính năng không dùng đến.";
+
+"MODERN_SETTINGS_CHAT_TITLE" = "Tin nhắn";
+"MODERN_SETTINGS_CHAT_SUBTITLE" = "Thêm các tính năng hữu ích cho giao diện XChat.";
+
+"MODERN_SETTINGS_SEARCH_TITLE" = "Tìm kiếm & Khám phá";
+"MODERN_SETTINGS_SEARCH_SUBTITLE" = "Tùy chỉnh nội dung hiển thị trong thẻ Tìm kiếm.";
+
+"MODERN_SETTINGS_PRESETS_TITLE" = "Cấu hình mẫu";
+"MODERN_SETTINGS_PRESETS_SUBTITLE" = "Áp dụng cấu hình có sẵn, hoặc xuất/nhập tệp cài đặt của riêng bạn.";
+
+"MODERN_SETTINGS_WEB_TITLE" = "Trình duyệt & Liên kết";
+"MODERN_SETTINGS_WEB_SUBTITLE" = "Tùy chỉnh cách hoạt động của liên kết và trình duyệt nội bộ Twitter.";
+
+"MODERN_SETTINGS_BRANDING_TITLE" = "Thương hiệu";
+"MODERN_SETTINGS_BRANDING_SUBTITLE" = "Tùy chỉnh mức độ khôi phục giao diện thương hiệu Twitter truyền thống.";
+
+"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "Thử nghiệm";
+"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "Trải nghiệm các tính năng đang trong quá trình thử nghiệm.";
+
+"MODERN_SETTINGS_DEBUG_TITLE" = "Gỡ lỗi";
+"MODERN_SETTINGS_DEBUG_SUBTITLE" = "Kiểm tra nguyên nhân khi có tính năng hoạt động không đúng.";
+
+"COOL_KIDS_SECTION_HEADER_TITLE" = "Cool kids";
+"SPECIAL_THANKS_SECTION_HEADER_TITLE" = "Lời cảm ơn đặc biệt";
+"FOLLOW_OFFICIAL_PAGE_SECTION_HEADER_TITLE" = "Theo dõi NeoFreeBird";
+
+/*General*/
+
+"HIDE_WHO_TO_FOLLOW_TITLE" = "Ẩn 'Gợi ý theo dõi'";
+"HIDE_WHO_TO_FOLLOW_DETAIL" = "Loại bỏ các mục gợi ý tài khoản nên theo dõi.";
+
+"NO_FOCUS_LOST_TITLE" = "Giữ vị trí đang xem";
+"NO_FOCUS_LOST_DETAIL" = "Chặn Twitter phát hiện khi bạn chuyển sang ứng dụng khác, giúp không bị trôi vị trí bài viết đang đọc.";
+
+"HIDE_TIMELINE_PROMPTS_TITLE" = "Ẩn nhắc nhở trên bảng tin";
+"HIDE_TIMELINE_PROMPTS_DETAIL" = "Loại bỏ các banner nhắc nhở như 'Thêm danh bạ'.";
+
+"HIDE_BLOCKED_RETWEETS_TITLE" = "Ẩn Retweet từ tài khoản đã chặn bạn";
+"HIDE_BLOCKED_RETWEETS_DETAIL" = "Ẩn bài Retweet của những tài khoản đã chặn bạn.";
+
+"PADLOCK_TITLE" = "Khóa ứng dụng Twitter";
+"PADLOCK_DETAIL" = "Yêu cầu Face ID, Touch ID hoặc mật khẩu để mở Twitter.";
+
+"NEW_INAPP_WEBVIEW_TITLE" = "Trình duyệt nội bộ cải tiến (beta)";
+"NEW_INAPP_WEBVIEW_DETAIL" = "Sử dụng trình duyệt nội bộ mới của Twitter khi mở liên kết.";
+
+"ALWAYS_OPEN_SAFARI_TITLE" = "Mở bằng trình duyệt ngoài";
+"ALWAYS_OPEN_SAFARI_DETAIL" = "Mở tất cả liên kết bằng Safari hoặc trình duyệt mặc định của máy.";
+
+"SHARING_DOMAIN_TITLE" = "Tên miền khi chia sẻ";
+
+/*Tweets*/
+"TWEET_TO_IMAGE_TITLE" = "Lưu Tweet thành hình ảnh";
+"TWEET_TO_IMAGE_DETAIL" = "Nhấn giữ nút chia sẻ để xuất Tweet thành tệp ảnh.";
+
+"LIKE_CONFIRM_TITLE" = "Xác nhận khi Thích";
+"LIKE_CONFIRM_DETAIL" = "Hỏi xác nhận trước khi thả tim/thích bài Tweet.";
+
+"USE_TENOR_GIFS_TITLE" = "Sử dụng GIF Tenor";
+"USE_TENOR_GIFS_DETAIL" = "Sử dụng kho GIF của Tenor thay cho GIPHY mặc định (Tenor có nhiều lựa chọn phong phú hơn).";
+
+"TWEET_CONFIRM_TITLE" = "Xác nhận khi đăng Tweet";
+"TWEET_CONFIRM_DETAIL" = "Hỏi xác nhận trước khi đăng bài Tweet.";
+
+"SHOW_POLL_RESULTS_TITLE" = "Hiện kết quả thăm dò trước khi bình chọn";
+"SHOW_POLL_RESULTS_DETAIL" = "Hiển thị tỷ lệ phần trăm bên cạnh các lựa chọn trước khi bạn bình chọn.";
+
+"SHOW_ACCOUNT_LOCATION_TITLE" = "Hiện vị trí tài khoản";
+"SHOW_ACCOUNT_LOCATION_DETAIL" = "Hiển thị vị trí quốc gia/khu vực của tài khoản ở chân bài Tweet.";
+
+"HIDE_BLUE_VERIFIED_TITLE" = "Ẩn tích xanh Blue";
+"HIDE_BLUE_VERIFIED_DETAIL" = "Ẩn huy hiệu tích xanh mua bằng tiền trên bài Tweet. Không áp dụng cho tài khoản doanh nghiệp/chính phủ.";
+
+"HIDE_VIEW_COUNT_TITLE" = "Ẩn lượt xem";
+"HIDE_VIEW_COUNT_DETAIL" = "Không hiển thị số lượt xem bên dưới bài Tweet.";
+
+"DISABLE_MEDIA_CAROUSEL_TITLE" = "Tắt xem ảnh cuộn ngang";
+"DISABLE_MEDIA_CAROUSEL_DETAIL" = "Khôi phục kiểu hiển thị danh sách ảnh/video truyền thống khi đăng nhiều tệp.";
+
+"HIDE_BOOKMARK_BUTTON_TITLE" = "Ẩn nút Dấu trang";
+"HIDE_BOOKMARK_BUTTON_DETAIL" = "Loại bỏ nút lưu Dấu trang khỏi bài Tweet.";
+"HIDE_DOWNVOTE_BUTTON_TITLE" = "Ẩn nút Downvote";
+"HIDE_DOWNVOTE_BUTTON_DETAIL" = "Loại bỏ nút Downvote (không thích) khỏi bài Tweet.";
+
+"DISABLE_SENSITIVE_TWEET_WARNINGS_TITLE" = "Tắt cảnh báo nội dung nhạy cảm";
+
+"BYPASS_AGE_VERIFICATION_TITLE" = "Bỏ qua xác minh độ tuổi";
+"BYPASS_AGE_VERIFICATION_DETAIL" = "Bỏ qua các bước xác minh độ tuổi đối với nội dung nhạy cảm.";
+
+"HIDE_GROK_ANALYZE_TITLE" = "Ẩn nút phân tích của Grok";
+
+"HIDE_GROK_SIDEBAR_TITLE" = "Ẩn Grok ở thanh bên";
+
+"HIDE_GROK_CREATE_TITLE" = "Ẩn nút tạo nội dung với Grok";
+"HIDE_GROK_CREATE_DETAIL" = "Loại bỏ tùy chọn tạo hoặc chỉnh sửa ảnh/video bằng Grok.";
+
+"DISABLE_AUTO_TRANSLATE_TITLE" = "Tắt tự động dịch";
+"DISABLE_AUTO_TRANSLATE_DETAIL" = "Không bao giờ tự động dịch các bài đăng hoặc tiểu sử.";
+
+"SQUARE_AVATARS_TITLE" = "Ảnh đại diện hình vuông";
+"SQUARE_AVATARS_DETAIL" = "Hiển thị ảnh đại diện khung vuông cho tất cả tài khoản giống như Twitter ngày trước.";
+
+"REPLY_SORTING_TITLE" = "Tắt tự sắp xếp bình luận";
+"REPLY_SORTING_DETAIL" = "Tắt tính năng tự động sắp xếp thứ tự phản hồi trong luồng trò chuyện.";
+
+"RESTORE_REPLY_CONTEXT_TITLE" = "Hiện ngữ cảnh phản hồi";
+"RESTORE_REPLY_CONTEXT_DETAIL" = "Hiển thị danh sách những người đang được trả lời ngay bên dưới Tweet.";
+
+"RESTORE_TWEET_LABELS_TITLE" = "Hiện nhãn nguồn đăng Tweet";
+"RESTORE_TWEET_LABELS_DETAIL" = "Hiển thị ứng dụng hoặc thiết bị đã dùng để đăng Tweet (ví dụ: Twitter for iPhone).";
+
+/*Chat*/
+"HIDE_TYPING_INDICATOR_TITLE" = "Ẩn trạng thái đang soạn tin";
+"HIDE_TYPING_INDICATOR_DETAIL" = "Không gửi thông báo \"đang soạn tin...\" cho người khác khi bạn đang gõ trong đoạn chat.";
+
+"DOWNLOAD_VOICE_MESSAGES_TITLE" = "Tải tin nhắn thoại";
+"DOWNLOAD_VOICE_MESSAGES_DETAIL" = "Lưu tin nhắn thoại vào máy sau khi nghe (nhấn giữ bằng 2 ngón tay vào tin nhắn thoại để tải xuống).";
+
+"BLOCK_SCREENSHOT_DETECTION_TITLE" = "Chặn phát hiện chụp màn hình";
+"BLOCK_SCREENSHOT_DETECTION_DETAIL" = "Cho phép chụp màn hình các cuộc trò chuyện bí mật mà không bị cảnh báo.";
+
+/*Profiles*/
+"FOLLOW_CONFIRM_TITLE" = "Xác nhận khi Theo dõi";
+"FOLLOW_CONFIRM_DETAIL" = "Hỏi xác nhận trước khi bấm Theo dõi ai đó.";
+
+"COPY_PROFILE_INFO_TITLE" = "Sao chép thông tin trang cá nhân";
+"COPY_PROFILE_INFO_DETAIL" = "Sao chép tên người dùng, tiểu sử và nhiều thông tin khác chỉ với một chạm.";
+
+"FAST_BLOCK_TITLE" = "Chặn / Tắt tiếng nhanh";
+"FAST_BLOCK_DETAIL" = "Chặn (Block) hoặc Tắt tiếng (Mute) tài khoản ngay lập tức mà không hiện hộp thoại xác nhận.";
+
+"DISABLE_ARTICLES_TITLE" = "Ẩn thẻ Bài viết (Articles)";
+"DISABLE_ARTICLES_DETAIL" = "Ẩn mục Bài viết trên trang cá nhân.";
+
+"DISABLE_HIGHLIGHTS_TITLE" = "Ẩn thẻ Nổi bật (Highlights)";
+"DISABLE_HIGHLIGHTS_DETAIL" = "Ẩn mục Nổi bật trên trang cá nhân.";
+
+"HIDE_FOLLOW_BUTTON_TITLE" = "Ẩn nút Theo dõi trên bài Tweet";
+"HIDE_FOLLOW_BUTTON_DETAIL" = "Ẩn nút Theo dõi xuất hiện trên các bài Tweet.";
+
+"RESTORE_FOLLOW_BUTTON_TITLE" = "Ẩn nút Đăng ký (Subscribe)";
+"RESTORE_FOLLOW_BUTTON_DETAIL" = "Ẩn nút Đăng ký trả phí trên bài Tweet và trang cá nhân.";
+
+"SHOW_UNROUNDED_COUNTS_TITLE" = "Hiện số lượng chính xác";
+"SHOW_UNROUNDED_COUNTS_DETAIL" = "Hiển thị con số chính xác của lượt theo dõi, đang theo dõi và bài Tweet thay vì làm tròn (K, M).";
+
+/*Search*/
+"NO_HISTORY_TITLE" = "Không lưu lịch sử tìm kiếm";
+"NO_HISTORY_DETAIL" = "Twitter sẽ không lưu lại các từ khóa bạn đã tìm kiếm.";
+
+"HIDE_TREND_VIDEOS_TITLE" = "Ẩn video xu hướng";
+"HIDE_TREND_VIDEOS_DETAIL" = "Loại bỏ danh sách video xu hướng trong giao diện tìm kiếm.";
+
+/*Photos and Videos*/
+"AUTO_HIGHEST_LOAD_TITLE" = "Tải phương tiện chất lượng cao";
+"AUTO_HIGHEST_LOAD_DETAIL" = "Luôn tải ảnh và video ở độ phân giải cao nhất.";
+
+"DISABLE_VIDEO_CAPTIONS_TITLE" = "Ẩn phụ đề video";
+
+"FORCE_TWEET_FULL_FRAME_TITLE" = "Hiển thị ảnh kích thước đầy đủ";
+
+"RESTORE_VIDEO_TIMESTAMP_TITLE" = "Hiện mốc thời gian video";
+"RESTORE_VIDEO_TIMESTAMP_DETAIL" = "Hiển thị mốc thời gian khi xem video ở trình phát toàn màn hình.";
+
+"TAP_TO_PAUSE_TITLE" = "Chạm để tạm dừng video";
+"TAP_TO_PAUSE_DETAIL" = "Chạm 2 ngón tay lên video để tạm dừng thay vì phải bấm nút dừng.";
+
+"DISABLE_IMMERSIVE_SCROLL_TITLE" = "Tắt cuộn lướt video dạng TikTok";
+
+"DISABLE_VIDEO_DOCKING_TITLE" = "Tắt thu nhỏ video (PiP)";
+"DISABLE_VIDEO_DOCKING_DETAIL" = "Ngăn nút hình trong hình (PiP) tự xuất hiện khi kéo video ra ngoài.";
+
+/*Twitter Blue*/
+"HIDE_PROMOTED_TITLE" = "Ẩn tất cả quảng cáo";
+"HIDE_PROMOTED_DETAIL" = "Loại bỏ toàn bộ bài đăng quảng cáo tài trợ.";
+
+"UNDO_TWEET_TITLE" = "Hoàn tác Tweet";
+
+"DOWNLOAD_VIDEOS_TITLE" = "Tải xuống phương tiện";
+"DOWNLOAD_VIDEOS_DETAIL" = "Tải video hoặc ảnh GIF trực tiếp từ menu tùy chọn của bài Tweet.";
+
+"DOWNLOAD_HIGHEST_QUALITY_TITLE" = "Luôn tải chất lượng cao nhất";
+"DOWNLOAD_HIGHEST_QUALITY_DETAIL" = "Bỏ qua bước chọn chất lượng và lưu ngay tệp MP4 nét nhất.";
+
+"UPLOAD_FULL_HD_VIDEOS_TITLE" = "Tải lên video Full HD";
+"UPLOAD_FULL_HD_VIDEOS_DETAIL" = "Mở khóa tính năng đăng tải video chất lượng 1080p.";
+
+"DIRECT_SAVE_TITLE" = "Lưu trực tiếp vào Ảnh";
+"DIRECT_SAVE_DETAIL" = "Video tải về sẽ được lưu thẳng vào ứng dụng Ảnh (Photos) của máy.";
+
+"HIDE_PREMIUM_OFFER_TITLE" = "Ẩn gợi ý mua Twitter Blue";
+"HIDE_PREMIUM_OFFER_DETAIL" = "Loại bỏ các nút 'Xác minh' và 'Nâng cấp'.";
+
+"THEME_OPTION_TITLE" = "Đổi chủ đề giao diện";
+
+"APP_ICON_TITLE" = "Đổi biểu tượng ứng dụng";
+
+"CUSTOM_TAB_BAR_OPTION_TITLE" = "Chỉnh sửa thanh điều hướng";
+
+/*Layout*/
+"HIDE_SPACES_TITLE" = "Ẩn thanh Không gian (Spaces)";
+
+"NO_TAB_BAR_HIDING_TITLE" = "Luôn hiện thanh điều hướng";
+"NO_TAB_BAR_HIDING_DETAIL" = "Không tự động ẩn thanh điều hướng phía dưới khi cuộn trang.";
+
+"HIDE_CUSTOM_TIMELINES_TITLE" = "Ẩn bảng tin tùy chỉnh";
+"HIDE_CUSTOM_TIMELINES_DETAIL" = "Loại bỏ nút Thêm trên các thẻ bảng tin Trang chủ.";
+
+"RESTORE_REFRESH_SOUNDS_TITLE" = "Âm thanh khi vuốt làm mới";
+
+"HIDE_TRENDS_TITLE" = "Ẩn nội dung xu hướng";
+"HIDE_TRENDS_DETAIL" = "Chỉ hiển thị thanh tìm kiếm trên thẻ Khám phá, ẩn toàn bộ xu hướng, tin tức và các thẻ trang.";
+
+"TAB_BAR_THEMING_TITLE" = "Thanh điều hướng cổ điển";
+"TAB_BAR_THEMING_DETAIL" = "Áp dụng màu chủ đề của bạn lên thẻ đang được chọn.";
+
+"DISABLE_RTL_TITLE" = "Sử dụng bố cục Từ trái sang phải";
+"DISABLE_RTL_DETAIL" = "Bắt buộc hiển thị giao diện từ trái sang phải, kể cả với các ngôn ngữ đọc từ phải sang trái.";
+
+"SHOW_SCROLL_INDICATOR_TITLE" = "Luôn hiện thanh cuộn";
+
+"CUSTOM_FONTS_TITLE" = "Phông chữ tùy chỉnh";
+"CUSTOM_FONTS_DETAIL" = "Chọn phông chữ tùy biến cho Twitter.";
+
+"REGULAR_FONTS_PICKER_OPTION_TITLE" = "Chọn phông chữ thường";
+
+"BOLD_FONTS_PICKER_OPTION_TITLE" = "Chọn phông chữ in đậm";
+
+/*Labs*/
+"REPLY_IN_WEBVIEW_TITLE" = "Trả lời trong Webview";
+"REPLY_IN_WEBVIEW_DETAIL" = "Mở khung trả lời trong giao diện Webview để tránh bị kiểm tra xác thực (attestation).";
+
+/*Debug*/
+"FLEX_TWITTER_TITLE" = "Chế độ gỡ lỗi (Debug)";
+"FLEX_TWITTER_DETAIL" = "Bật công cụ FLEX để kiểm tra và gỡ lỗi giao diện, dữ liệu Twitter.";
+
+/*Developers*/
+"DEVELOPER_SECTION_HEADER_TITLE" = "Nhà phát triển";
+
+/*Custom fonts*/
+"CUSTOM_FONTS_NAVIGATION_BUTTON_TITLE" = "Phông chữ tùy chỉnh";
+"CUSTOM_FONTS_MENU_TITLE" = "\nChọn phông chữ";
+"CUSTOM_FONTS_TUT_ALERT_MESSAGE" = "Chưa có phông chữ tùy chỉnh nào. Bạn có thể cài đặt thêm bằng ứng dụng iFont trên App Store.";
+
+/*Download*/
+"DOWNLOAD_MENU_TITLE" = "\nChọn chất lượng video";
+"FETCHING_PROGRESS_TITLE" = "Đang xử lý, vui lòng chờ...";
+"DOWNLOAD_AS_GIF_OPTION_TITLE" = "Tải dưới dạng GIF";
+"DOWNLOAD_AS_MP4_OPTION_TITLE" = "Tải dưới dạng MP4";
+
+/*App icon*/
+
+/*Copy profile info*/
+"COPY_PROFILE_INFO_MENU_OPTION_1" = "Sao chép tiểu sử";
+"COPY_PROFILE_INFO_MENU_OPTION_2" = "Sao chép tên người dùng (@username)";
+"COPY_PROFILE_INFO_MENU_OPTION_3" = "Sao chép tên hiển thị";
+"COPY_PROFILE_INFO_MENU_OPTION_4" = "Sao chép trang web";
+"COPY_PROFILE_INFO_MENU_OPTION_5" = "Sao chép vị trí";
+"COPY_PROFILE_INFO_MENU_OPTION_6" = "Sao chép liên kết trang cá nhân";
+"COPY_PROFILE_INFO_MENU_OPTION_7" = "Sao chép ID người dùng";
+"COPY_PROFILE_INFO_MENU_OPTION_8" = "Sao chép ngày tham gia";
+
+/*Theme*/
+"THEME_SETTINGS_NAVIGATION_TITLE" = "Chủ đề";
+"THEME_SETTINGS_NAVIGATION_DETAIL" = "Chọn màu chủ đề cho trải nghiệm Twitter của bạn. Màu này chỉ hiển thị trên máy của bạn.";
+
+/*Tab bar*/
+"CUSTOM_TAB_BAR_SETTINGS_NAVIGATION_TITLE" = "Tùy chỉnh thanh điều hướng";
+"CUSTOM_TAB_BAR_GRID_DETAIL" = "Nhấn vào mục để thêm hoặc loại bỏ. Kéo thanh bên dưới để sắp xếp lại thứ tự.";
+"CUSTOM_TAB_BAR_RESET_MESSAGE" = "Bạn có chắc chắn muốn đặt lại thanh điều hướng về mặc định không?";
+
+/* Restore tab labels */
+"RESTORE_TAB_LABELS_TITLE" = "Nhãn biểu tượng thanh điều hướng";
+"RESTORE_TAB_LABELS_DETAIL" = "Hiển thị tên nhãn bên dưới các biểu tượng trên thanh điều hướng.";
+
+"COLOR_TWITTER_ICON_IN_TOP_BAR_TITLE" = "Đổi màu biểu tượng Twitter";
+"COLOR_TWITTER_ICON_IN_TOP_BAR_DETAIL" = "Áp dụng màu chủ đề lên biểu tượng Twitter ở thanh trên cùng.";
+
+"REFRESH_PILL_TEXT" = "vừa đăng";
+"REFRESH_PILL_LABEL_TITLE" = "Thêm chữ vào nút làm mới";
+"REFRESH_PILL_LABEL_DETAIL" = "Hiển thị lại nhãn chữ trên nút làm mới mỗi khi có bài Tweet mới.";
+
+"RESTORE_TWITTER_NAMES_TITLE" = "Khôi phục thuật ngữ Twitter";
+"RESTORE_TWITTER_NAMES_DETAIL" = "Thay thế 'X' thành 'Twitter', 'Bài đăng' thành 'Tweet', 'Đăng lại' thành 'Retweet' v.v. trên toàn bộ giao diện ứng dụng.";
+
+"BLUE_LAUNCH_SCREEN_TITLE" = "Khôi phục màn hình khởi động xanh";
+"BLUE_LAUNCH_SCREEN_DETAIL" = "Khôi phục lại màn hình logo Twitter màu xanh cổ điển khi mở ứng dụng.";
+
+/*Dim Theme*/
+"ENABLE_DIM_THEME_TITLE" = "Bật chủ đề Tối mờ (Dim)";
+"ENABLE_DIM_THEME_DETAIL" = "Khôi phục chủ đề màu xám đen (Dim) đã bị loại bỏ của Twitter. Yêu cầu bật Chế độ tối và khởi động lại ứng dụng.";
+"DIM_THEME_RESTART_ALERT_TITLE" = "Yêu cầu khởi động lại";
+"DIM_THEME_RESTART_ALERT_MESSAGE" = "Chủ đề tối mờ yêu cầu khởi động lại ứng dụng để áp dụng thay đổi.";
+"DIM_THEME_RESTART_ALERT_RESTART_BUTTON" = "Khởi động lại";
+
+"HIDE_VERIFIED_TWEETS_TITLE" = "Ẩn Tweet từ tài khoản đã xác minh";
+"HIDE_VERIFIED_TWEETS_DETAIL" = "Ẩn các bài Tweet từ tài khoản có tích xanh trên bảng tin và bình luận, trừ khi họ trả lời trong cùng chủ đề hoặc bạn đang theo dõi họ.";
+
+"HIDE_TWEET_BUTTON_TITLE" = "Ẩn nút đăng Tweet";
+"HIDE_TWEET_BUTTON_DETAIL" = "Loại bỏ nút đăng Tweet khỏi thanh điều hướng.";
+
+/*Deprecated*/
+"MODERN_SETTINGS_PLACEHOLDER_TEXT" = "Chưa có gì ở đây";
+"MODERN_SETTINGS_PLACEHOLDER_DETAIL_TEXT" = "Mục này sắp được ra mắt. Hãy đón chờ thêm các tính năng mới từ NeoFreeBird!";
+
+"SOURCE_UNAVAILABLE" = "Nguồn không khả dụng";
+
+"LOCATION_UNAVAILABLE" = "Vị trí không khả dụng";
+
+"CONTRIBUTOR_PAGE_SECTION_HEADER_TITLE" = "Người đóng góp";
+
+/*App lock*/
+"PADLOCK_LOCKED_LABEL" = "Đã khóa";
+
+/*Source labels*/
+"UNKNOWN_SOURCE" = "Không rõ nguồn";
+
+/*Media downloads*/
+"DOWNLOAD_VIDEO_NUMBER_TITLE" = "Video %lu";
+"UNKNOWN_ERROR" = "Đã xảy ra lỗi không xác định.";
+
+/*Custom fonts*/
+"INSTALL_IFONT_BUTTON_TITLE" = "Ứng dụng iFont";
+"FONT_SYSTEM_DEFAULT_SUBTITLE" = "Mặc định hệ thống";
+
+/*Legacy login*/
+"LEGACY_LOGIN_INFO_LABEL" = "Đăng nhập bằng tên người dùng và mật khẩu của bạn.\n\nKhông hỗ trợ đăng nhập qua Google và Apple. Nếu tài khoản của bạn dùng hai phương thức này, hãy tạo mật khẩu cho tài khoản trước.";
+"LEGACY_LOGIN_MISSING_INPUT_TITLE" = "Thiếu thông tin";
+"LEGACY_LOGIN_MISSING_INPUT_MESSAGE" = "Vui lòng nhập tên người dùng và mật khẩu.";
+"LEGACY_LOGIN_VERIFYING_STATUS" = "Đang xác minh…";
+"LEGACY_LOGIN_SIGNING_IN_STATUS" = "Đang đăng nhập…";
+"LEGACY_LOGIN_UNAVAILABLE_TITLE" = "Không khả dụng";
+"PHONE_OR_EMAIL_OR_USERNAME_LABEL" = "Số điện thoại, email hoặc tên người dùng";
+"PASSWORD_LABEL" = "Mật khẩu";
+"LOG_IN_ACTION_LABEL" = "Đăng nhập";
+"LOG_IN_TITLE" = "Đăng nhập";
+"LEGACY_LOGIN_CLASSES_MISSING_MESSAGE" = "Thiếu các lớp (classes) đăng nhập.";
+"LEGACY_LOGIN_BUILD_COMMAND_FAILED_MESSAGE" = "Không thể khởi tạo lệnh đăng nhập.";
+"LEGACY_LOGIN_CRASH_AVOIDED_TITLE" = "Đã ngăn văng ứng dụng";
+"LEGACY_LOGIN_UNEXPECTED_RESPONSE_TITLE" = "Phản hồi không xác định";
+"LEGACY_LOGIN_NO_TOKEN_NO_CHALLENGE_MESSAGE" = "Không nhận được token hoặc challenge.";
+"LEGACY_LOGIN_CHALLENGE_MISSING_INFO_MESSAGE" = "Challenge thiếu ID yêu cầu hoặc URL.";
+"LEGACY_LOGIN_CHALLENGE_CLASSES_MISSING_MESSAGE" = "Thiếu các lớp (classes) challenge/host.";
+"LEGACY_LOGIN_BUILD_CHALLENGE_FAILED_MESSAGE" = "Không thể khởi tạo challenge.";
+"LEGACY_LOGIN_NO_TOKEN_MESSAGE" = "Không có token trong phản hồi.";
+"LEGACY_LOGIN_FAILED_TITLE" = "Đăng nhập thất bại";
+"LEGACY_LOGIN_NO_ACCOUNT_MESSAGE" = "Không nhận được dữ liệu tài khoản.";
+"LEGACY_LOGIN_RATE_LIMITED_TITLE" = "Có thể bị giới hạn tần suất (243)";
+"LEGACY_LOGIN_RATE_LIMITED_MESSAGE" = "Đã thử quá nhiều lần. Vui lòng đợi một lúc hoặc đổi mạng/VPN rồi thử lại.\n\nChi tiết:\n%@";
+"LEGACY_LOGIN_UNKNOWN_ERROR" = "Lỗi không xác định";
+
+"DOWNLOAD_ACTIVITY_VIEW_LABEL" = "Tải phương tiện";
+"DOWNLOAD_LIVE_ACTIVITY_DOWNLOADING" = "Đang tải xuống";
+
+/* Subscription Keys */
+"SUBSCRIPTION_APP_ICON_SETTINGS_TITLE" = "Đổi biểu tượng ứng dụng";
+"SUBSCRIPTION_APP_ICON_SETTINGS_DETAIL" = "Chọn biểu tượng ứng dụng tùy chỉnh cho màn hình chính của thiết bị. Thay đổi bất kỳ lúc nào.";
+
+"SUBSCRIPTION_TAB_CUSTOMIZATION_RESTORE_BUTTON_TITLE" = "Đặt lại về mặc định";
+"Restore to default" = "Đặt lại về mặc định";
+
+"SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "Thời gian hoàn tác";
+"SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "Chọn khoảng thời gian nút hoàn tác (Undo) hiển thị sau khi gửi Tweet.";
+
+/* Presets — settings import and export */
+"SETTINGS_EXPORT_TITLE" = "Xuất cài đặt";
+"SETTINGS_IMPORT_TITLE" = "Nhập cài đặt";
+
+"SETTINGS_EXPORT_FAILED_TITLE" = "Xuất cài đặt thất bại";
+"SETTINGS_EXPORT_WRITE_FAILED" = "Không thể tạo tệp cài đặt.";
+
+"SETTINGS_IMPORT_CONFIRM_TITLE" = "Nhập cài đặt?";
+"SETTINGS_IMPORT_CONFIRM_MESSAGE" = "Các cài đặt NeoFreeBird hiện tại sẽ bị thay thế bởi cài đặt trong tệp bạn chọn.";
+"SETTINGS_IMPORT_CONFIRM_BUTTON" = "Chọn tệp";
+"SETTINGS_IMPORT_FAILED_TITLE" = "Nhập cài đặt thất bại";
+"SETTINGS_IMPORT_SUCCESS_TITLE" = "Nhập cài đặt thành công";
+"SETTINGS_IMPORT_SUCCESS_MESSAGE" = "Đã áp dụng thành công %ld cài đặt. Vui lòng khởi động lại ứng dụng để tất cả cài đặt có hiệu lực.";
+"SETTINGS_IMPORT_RESTART_BUTTON" = "Khởi động lại";
+"SETTINGS_IMPORT_LATER_BUTTON" = "Để sau";
+
+"SETTINGS_TRANSFER_UNREADABLE_FILE" = "Không thể đọc tệp đó.";
+"SETTINGS_TRANSFER_MALFORMED_FILE" = "Tệp được chọn không đúng định dạng xuất cài đặt của NeoFreeBird.";
+"SETTINGS_TRANSFER_NO_SETTINGS" = "Tệp được chọn không chứa bất kỳ cài đặt nào mà phiên bản này nhận diện được.";
+
+/* Common UI Elements & Time Selectors */
+"Off" = "Tắt";
+"Cancel" = "Hủy";
+"5 seconds" = "5 giây";
+"10 seconds" = "10 giây";
+"20 seconds" = "20 giây";
+"30 seconds" = "30 giây";
+"60 seconds" = "60 giây";
+
+/* Undo Duration Labels (Added for TweetsSettingsViewController) */
+"GENERIC_OFF_LABEL" = "Tắt";
+"SUBSCRIPTION_UNDO_SEND_DURATION_LABEL" = "%ld giây";
