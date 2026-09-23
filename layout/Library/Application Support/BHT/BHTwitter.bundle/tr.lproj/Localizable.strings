@@ -147,7 +147,7 @@
 "HIDE_GROK_CREATE_DETAIL" = "Grok ile görsel ve video oluşturma veya düzenleme seçeneklerini kaldırır.";
 
 "DISABLE_AUTO_TRANSLATE_TITLE" = "Otomatik çeviriyi devre dışı bırak";
-"DISABLE_AUTO_TRANSLATE_DETAIL" = "Gönderileri ve biyografileri otomatik olarak çevirmez.";
+"DISABLE_AUTO_TRANSLATE_DETAIL" = "Tweetleri ve biyografileri otomatik olarak çevirmez.";
 
 "SQUARE_AVATARS_TITLE" = "Kare profil resimleri";
 "SQUARE_AVATARS_DETAIL" = "Herkese, marka hesaplarında olduğu gibi kare profil resimleri verir.";
