@@ -15,10 +15,13 @@ renaming at all.
 */
 
 "yeniden gönder" = "retweetle";
+"yeniden gönderi" = "retweet";
+"yeniden gönderiyi" = "retweet'i";
 "yeniden gönderiler" = "retweetler";
 "yeniden gönderildi" = "retweetlendi";
 "yeniden gönderiliyor" = "retweetleniyor";
 "gönderi" = "tweetle";
+"gönderiyi" = "tweet'i";
 "gönderiler" = "tweetler";
 "gönderildi" = "tweetlendi";
 "gönderiliyor" = "tweetleniyor";
