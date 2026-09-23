@@ -14,11 +14,10 @@ Strictly per-language: a language without its own copy of this file gets no gene
 renaming at all.
 */
 
-"yeniden gönder" = "Retweetle";
-"alıntı" = "Alıntıla";
-"yeniden gönderiler" = "Retweetler";
-"yeniden gönderildi" = "Retweetlendi";
-"yeniden gönderiliyor" = "Retweetleniyor";
+"yeniden gönder" = "retweetle";
+"yeniden gönderiler" = "retweetler";
+"yeniden gönderildi" = "retweetlendi";
+"yeniden gönderiliyor" = "retweetleniyor";
 "gönderi" = "Tweet";
 "gönderiler" = "Tweetler";
 "gönderildi" = "Tweetlendi";
