@@ -14,3 +14,10 @@ e.g. The payments provider is genuinely named X, so don't rename it to Twitter.
 
 "PAYMENTS_PROVIDER_X" = "X";
 */
+
+/* Navigation bar and header titles */
+"Gönderi" = "Tweet";
+"gönderi" = "Tweet";
+"Post" = "Tweet";
+"Post Detail" = "Tweet";
+"Tweetle" = "Tweet";
