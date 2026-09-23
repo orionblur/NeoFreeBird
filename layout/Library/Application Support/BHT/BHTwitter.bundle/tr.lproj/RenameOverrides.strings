@@ -24,3 +24,4 @@ e.g. The payments provider is genuinely named X, so don't rename it to Twitter.
 /* Action buttons */
 "Gönder" = "Tweetle";
 "gönder" = "Tweetle";
+"Tweet" = "Tweetle";
