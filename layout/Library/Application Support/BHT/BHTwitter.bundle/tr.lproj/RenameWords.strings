@@ -14,13 +14,13 @@ Strictly per-language: a language without its own copy of this file gets no gene
 renaming at all.
 */
 
-"repost" = "retweet";
-"reposts" = "retweetler";
-"reposted" = "retweetlendi";
-"reposting" = "retweetleniyor";
-"post" = "Tweet";
-"posts" = "Tweetler";
-"posted" = "Tweetlendi";
-"posting" = "Tweetleniyor";
+"yeniden gönder" = "retweet";
+"yeniden gönderiler" = "retweetler";
+"yeniden gönderildi" = "retweetlendi";
+"yeniden gönderiliyor" = "retweetleniyor";
+"gönderi" = "Tweet";
+"gönderiler" = "Tweetler";
+"gönderildi" = "Tweetlendi";
+"gönderiliyor" = "Tweetleniyor";
 "premium" = "Blue";
 "X" = "Twitter";
