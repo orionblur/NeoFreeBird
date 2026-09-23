@@ -20,6 +20,7 @@ renaming at all.
 "yeniden gönderiler" = "retweetler";
 "yeniden gönderildi" = "retweetlendi";
 "yeniden gönderiliyor" = "retweetleniyor";
+"gönderi etkinliği" = "tweet etkinliği";
 "gönderi" = "tweetle";
 "gönderiyi" = "tweet'i";
 "gönderiler" = "tweetler";
@@ -27,5 +28,6 @@ renaming at all.
 "gönderiliyor" = "tweetleniyor";
 "alıntı" = "tweeti alıntıla";
 "alıntıları" = "alıntılanan tweetleri";
+"alıntılar" = "alıntı tweetler";
 "premium" = "Blue";
 "X" = "Twitter";
