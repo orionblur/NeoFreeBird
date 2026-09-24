@@ -77,6 +77,8 @@ static void refreshXTIDForMethodPath(NSString* method, NSString* path);
 static void prewarmCreateTweetXTID(void);
 static void refreshWebCookiesViaWebView(void);
 static void teardownWebHarvestWindow(void);
+static void seedWebSessionCookies(WKHTTPCookieStore* store, NSDictionary<NSString*, NSString*>* pairs,
+                                  void (^done)(void));
 BOOL isCookieLoginUserID(NSString* userID);
 
 @interface WKWebView (AsyncJavaScript)
@@ -359,30 +361,39 @@ static WebHelperDelegate* WebHelperDelegateInstance = nil;
 static void seedHelperCookies(WKWebView* webView, void (^done)(void)) {
     NSDictionary* pairs =
         @{@"auth_token": WebAuthToken ?: @"", @"ct0": WebCT0 ?: @"", @"twid": WebTwid ?: @""};
+    seedWebSessionCookies(webView.configuration.websiteDataStore.httpCookieStore, pairs, done);
+}
+
+static void seedWebSessionCookies(WKHTTPCookieStore* store, NSDictionary<NSString*, NSString*>* pairs,
+                                  void (^done)(void)) {
+    done = done ?: ^{
+    };
 
     NSMutableArray<NSHTTPCookie*>* cookies = [NSMutableArray array];
-    for (NSString* name in pairs) {
-        NSString* value = pairs[name];
-        if (value.length == 0) {
-            continue;
-        }
-        NSHTTPCookie* cookie = [NSHTTPCookie cookieWithProperties:@{
-            NSHTTPCookieName: name,
-            NSHTTPCookieValue: value,
-            NSHTTPCookieDomain: @".x.com",
-            NSHTTPCookiePath: @"/",
-        }];
-        if (cookie) {
-            [cookies addObject:cookie];
+    for (NSString* domain in @[@".x.com", @".twitter.com"]) {
+        for (NSString* name in pairs) {
+            NSString* value = pairs[name];
+            if (value.length == 0) {
+                continue;
+            }
+            NSHTTPCookie* cookie = [NSHTTPCookie cookieWithProperties:@{
+                NSHTTPCookieName: name,
+                NSHTTPCookieValue: value,
+                NSHTTPCookieDomain: domain,
+                NSHTTPCookiePath: @"/",
+                NSHTTPCookieSecure: @"TRUE",
+            }];
+            if (cookie) {
+                [cookies addObject:cookie];
+            }
         }
     }
 
-    if (cookies.count == 0) {
+    if (!store || cookies.count == 0) {
         done();
         return;
     }
 
-    WKHTTPCookieStore* store = webView.configuration.websiteDataStore.httpCookieStore;
     __block NSUInteger remaining = cookies.count;
     for (NSHTTPCookie* cookie in cookies) {
         [store setCookie:cookie
@@ -1112,7 +1123,108 @@ NSDictionary* currentWebCredentials(void) {
     return @{@"auth_token": WebAuthToken, @"ct0": WebCT0};
 }
 
+// MARK: - Cookie-login webviews
+
+static const void* WebViewSessionCookiesKey = &WebViewSessionCookiesKey;
+static const void* WebStorePendingLoadKey = &WebStorePendingLoadKey;
+
+// A cookie-login account's cached web session. Never blocks: a missing ct0 is fine,
+// since x.com mints one on the first authenticated page load.
+static NSDictionary* cachedWebSessionForAccount(id account) {
+    NSString* userID = userIDStringForAccount(account);
+    if (!isCookieLoginUserID(userID)) {
+        return nil;
+    }
+
+    NSDictionary* cached = cachedAccountPair(userID);
+    NSString* authToken = cached[@"auth_token"];
+    NSString* ct0 = cached[@"ct0"];
+    if (authToken.length == 0) {
+        authToken = authTokenForUserID(userID);
+        ct0 = nil;
+    }
+    if (authToken.length == 0) {
+        return nil;
+    }
+
+    NSString* twid = cached[@"twid"];
+    return @{
+        @"auth_token": authToken,
+        @"ct0": ct0 ?: @"",
+        @"twid": twid.length ? twid : [NSString stringWithFormat:@"u=%@", userID],
+    };
+}
+
 // MARK: - Hooks
+
+%hook T1WebViewController
+- (id)initWithRootURL:(NSURL*)rootURL
+                      account:(id)account
+           shouldAuthenticate:(BOOL)shouldAuthenticate
+    shouldPresentAsNativePage:(BOOL)shouldPresentAsNativePage
+                 sourceStatus:(id)sourceStatus
+              scribeComponent:(id)scribeComponent
+             scribeParameters:(id)scribeParameters {
+    NSDictionary* session = shouldAuthenticate ? cachedWebSessionForAccount(account) : nil;
+    if (!session) {
+        return %orig;
+    }
+
+    self = %orig(rootURL, account, NO, shouldPresentAsNativePage, sourceStatus, scribeComponent,
+                 scribeParameters);
+    if (self) {
+        objc_setAssociatedObject(self, WebViewSessionCookiesKey, session,
+                                 OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return self;
+}
+
+// Called from -loadView with the configuration the webview is about to be created with.
+- (id)updateConfiguration:(id)configuration {
+    id result = %orig;
+
+    NSDictionary* session = objc_getAssociatedObject(self, WebViewSessionCookiesKey);
+    WKWebViewConfiguration* config =
+        [result isKindOfClass:[WKWebViewConfiguration class]] ? result : configuration;
+    if (!session || ![config isKindOfClass:[WKWebViewConfiguration class]]) {
+        return result;
+    }
+
+    WKWebsiteDataStore* store = [WKWebsiteDataStore nonPersistentDataStore];
+    config.websiteDataStore = store;
+
+    objc_setAssociatedObject(store, WebStorePendingLoadKey, [NSMutableArray array],
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    seedWebSessionCookies(store.httpCookieStore, session, ^{
+        NSArray* pending = objc_getAssociatedObject(store, WebStorePendingLoadKey);
+        objc_setAssociatedObject(store, WebStorePendingLoadKey, nil,
+                                 OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        void (^load)(void) = pending.lastObject;
+        if (load) {
+            load();
+        }
+    });
+    return result;
+}
+
+%end
+
+%hook WKWebView
+- (WKNavigation*)loadRequest:(NSURLRequest*)request {
+    NSMutableArray* pending =
+        objc_getAssociatedObject(self.configuration.websiteDataStore, WebStorePendingLoadKey);
+    if (!pending) {
+        return %orig;
+    }
+
+    __weak WKWebView* weakSelf = self;
+    [pending removeAllObjects];
+    [pending addObject:[^{
+                 [weakSelf loadRequest:request];
+             } copy]];
+    return nil;
+}
+%end
 
 %hook NSURLSession
 
