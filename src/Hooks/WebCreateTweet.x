@@ -852,8 +852,16 @@ static BOOL isCreateTweetURL(NSURL* url) { return url && [url.path hasSuffix:@"/
 static BOOL isAccountURL(NSURL* url) { return url && ([url.path containsString:@"/1.1/account"] 
 || [url.path containsString:@"/1.1/users/"]); }
 
+static BOOL isPeriscopeAuthURL(NSURL* url) {
+    NSString* path = url.path ?: @"";
+    return [path hasSuffix:@"/oauth/authenticate_periscope"] ||
+           [path hasSuffix:@"/oauth/authenticate_periscope.json"];
+}
+
 // CreateTweet needs to go through the web path, otherwise AppAttest kicks in
-static BOOL isWriteRequest(NSURL* url) { return isCreateTweetURL(url) || isAccountURL(url); }
+static BOOL isWriteRequest(NSURL* url) {
+    return isCreateTweetURL(url) || isAccountURL(url) || isPeriscopeAuthURL(url);
+}
 
 static NSURL* webEquivalentURL(NSURL* url) {
     if (!isWriteRequest(url)) {
@@ -861,6 +869,11 @@ static NSURL* webEquivalentURL(NSURL* url) {
     }
 
     NSURLComponents* c = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
+    if (c && isPeriscopeAuthURL(url)) {
+        c.host = @"x.com";
+        c.path = @"/i/api/1.1/oauth/authenticate_periscope.json";
+        return c.URL ?: url;
+    }
     NSString* path = c.path ?: @"";
     if (c && [path containsString:@"/graphql/"]) {
         c.host = @"x.com";
@@ -996,6 +1009,10 @@ static NSMutableURLRequest* webRequestFromNativeSend(NSURLRequest* request) {
     NSMutableURLRequest* outgoing = [request mutableCopy];
 
     outgoing.URL = webEquivalentURL(outgoing.URL);
+    if (isPeriscopeAuthURL(outgoing.URL)) {
+        outgoing.HTTPMethod = @"GET";
+        outgoing.HTTPBody = nil;
+    }
     applyWebAuth(outgoing, authToken, ct0, postingUserID);
 
     // Only the write (CreateTweet) is routed to the web endpoint and carries a
