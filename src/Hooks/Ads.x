@@ -161,3 +161,90 @@ static NSArray* FilteredSections(TFNItemsDataViewController* dataViewController,
 }
 
 %end
+
+// MARK: - Immersive video feed
+
+// The vertical video feed keeps its own card list and never goes through
+// TFNItemsDataViewController, so promoted cards are dropped from that list
+// before they become pages.
+
+static BOOL ImmersiveCardIsPromoted(id card) {
+    if ([card isKindOfClass:objc_getClass("_TtC14T1TwitterSwift36ImmersiveGoogleNativeAdCardViewModel")]) {
+        return YES;
+    }
+
+    Ivar itemIvar =
+        class_getInstanceVariable([card class], "statusItemViewModel");
+    return itemIvar && StatusItemIsPromoted(object_getIvar(card, itemIvar));
+}
+
+// The coordinator's `items` is a Swift [ImmersiveCardViewModelProtocol]. Its
+// buffer has the count at +16 and the elements from +32, two words each: the
+// card and its protocol witness table.
+static void RemovePromotedImmersiveCards(id viewController) {
+    if (!viewController || ![BHTSettings boolForKey:@"hide_promoted"]) {
+        return;
+    }
+
+    Ivar coordinatorIvar =
+        class_getInstanceVariable([viewController class], "timelineCoordinator");
+    id coordinator =
+        coordinatorIvar ? object_getIvar(viewController, coordinatorIvar) : nil;
+    Ivar itemsIvar = class_getInstanceVariable([coordinator class], "items");
+    if (!itemsIvar) {
+        return;
+    }
+
+    uint8_t* buffer = *(uint8_t**)((uint8_t*)(__bridge void*)coordinator +
+                                   ivar_getOffset(itemsIvar));
+    int64_t* count = (int64_t*)(buffer + 16);
+    void** elements = (void**)(buffer + 32);
+
+    int64_t first = 0;
+    while (first < *count &&
+           !ImmersiveCardIsPromoted((__bridge id)elements[first * 2])) {
+        first++;
+    }
+    if (first == *count) {
+        return;
+    }
+
+    static bool (*isUniquelyReferenced)(const void*);
+    static void (*unknownObjectRelease)(void*);
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        isUniquelyReferenced =
+            dlsym(RTLD_DEFAULT, "swift_isUniquelyReferenced_nonNull_native");
+        unknownObjectRelease = dlsym(RTLD_DEFAULT, "swift_unknownObjectRelease");
+    });
+
+    // Editing a buffer that another array still shares would change that
+    // array too.
+    if (!isUniquelyReferenced || !unknownObjectRelease ||
+        !isUniquelyReferenced(buffer)) {
+        return;
+    }
+
+    int64_t kept = first;
+    for (int64_t i = first; i < *count; i++) {
+        void* card = elements[i * 2];
+        if (ImmersiveCardIsPromoted((__bridge id)card)) {
+            unknownObjectRelease(card);
+            continue;
+        }
+
+        elements[kept * 2] = card;
+        elements[kept * 2 + 1] = elements[i * 2 + 1];
+        kept++;
+    }
+    *count = kept;
+}
+
+%hook T1ImmersiveViewController
+
+- (void)viewWillLayoutSubviews {
+    RemovePromotedImmersiveCards(self);
+    %orig;
+}
+
+%end
