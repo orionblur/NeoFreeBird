@@ -80,8 +80,8 @@
 "PADLOCK_TITLE" = "Zaključaj Twitter";
 "PADLOCK_DETAIL" = "Za otvaranje Twittera potreban je Face ID ili šifra.";
 
-"HIDE_BLOCKED_RETWEETS_TITLE" = "Sakrij blokirane retweeove";
-"HIDE_BLOCKED_RETWEETS_DETAIL" = "Sakrij retweeove računa koji su vas blokirali.";
+"HIDE_BLOCKED_RETWEETS_TITLE" = "Sakrij blokirane retweetove";
+"HIDE_BLOCKED_RETWEETS_DETAIL" = "Sakrij retweetove računa koji su vas blokirali.";
 
 "NEW_INAPP_WEBVIEW_TITLE" = "Poboljšani preglednik u aplikaciji (beta)";
 "NEW_INAPP_WEBVIEW_DETAIL" = "Koristite Twitterov novi preglednik u aplikaciji za otvaranje poveznica.";
@@ -105,7 +105,7 @@
 "USE_TENOR_GIFS_DETAIL" = "Koristi Tenor GIF-ove umjesto Twitterovih GIF-ova (GIPHY). Tenor ima više opcija.";
 
 "SHOW_POLL_RESULTS_TITLE" = "Prikaži rezultate ankete prije glasanja";
-"SHOW_POLL_RESULTS_DETAIL" = "Prikazuje rezultate ankete uz opcije prije nego što glasate. Na taj način možete vidjeti kako su drugi glasali. ";
+"SHOW_POLL_RESULTS_DETAIL" = "Prikazuje rezultate ankete uz opcije prije nego što glasate. Na taj način možete vidjeti kako su drugi glasali.";
 
 "SHOW_ACCOUNT_LOCATION_TITLE" = "Prikaži lokaciju računa";
 "SHOW_ACCOUNT_LOCATION_DETAIL" = "Prikaži lokaciju računa koji je objavio tweet u podnožju tweeta.";
@@ -116,7 +116,7 @@
 "HIDE_VIEW_COUNT_TITLE" = "Sakrij broj pregleda";
 "HIDE_VIEW_COUNT_DETAIL" = "Ne prikazuj broj pregleda ispod tweetova.";
 
-"DISABLE_MEDIA_CAROUSEL_TITLE" = "Onemogući media carousel";
+"DISABLE_MEDIA_CAROUSEL_TITLE" = "Onemogući novi media carousel";
 "DISABLE_MEDIA_CAROUSEL_DETAIL" = "Vraća stari izgled za više medijskih privitaka.";
 
 "HIDE_BOOKMARK_BUTTON_TITLE" = "Sakrij oznake";
@@ -335,11 +335,11 @@
 "ENABLE_DIM_THEME_TITLE" = "Uključi dim temu";
 "ENABLE_DIM_THEME_DETAIL" = "Vraća dim temu za Twitter. Potrebno je imati upaljen dark mode te napraviti restart.";
 "DIM_THEME_RESTART_ALERT_TITLE" = "Restart potreban";
-"DIM_THEME_RESTART_ALERT_MESSAGE" = "Dim tema zahtjeva restart da bi se primijenila.";
+"DIM_THEME_RESTART_ALERT_MESSAGE" = "Za primjenu dim teme potrebno je ponovno pokrenuti aplikaciju.";
 "DIM_THEME_RESTART_ALERT_RESTART_BUTTON" = "Restart";
 
-"HIDE_VERIFIED_TWEETS_TITLE" = "Hide verified Tweets";
-"HIDE_VERIFIED_TWEETS_DETAIL" = "Skriva Tweetove s potvrđenih računa u vašoj vremenskoj liniji i odgovorima, osim ako autor nije odgovorio na njih u istom threadu ili ako pratite račun.";
+"HIDE_VERIFIED_TWEETS_TITLE" = "Sakrij tweetove potvrđenih računa";
+"HIDE_VERIFIED_TWEETS_DETAIL" = "Skriva tweetove s potvrđenih računa u vašoj vremenskoj liniji i odgovorima, osim ako autor nije odgovorio na njih u istom threadu ili ako pratite račun.";
 
 "HIDE_TWEET_BUTTON_TITLE" = "Skarij Tweet gumb";
 "HIDE_TWEET_BUTTON_DETAIL" = "Uklanja gumb za Tweetanje iz navigacijske trake.";
@@ -405,7 +405,7 @@
 "Restore to default" = "Vrati na zadane postavke";
 
 "SUBSCRIPTION_UNDO_SEND_DURATION_TITLE" = "Vrijeme za poništavanje slanja";
-"SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "Odaberi koliko dugo će gumb za poništavanje ostati aktivan nakon slanja tweet-a.";
+"SUBSCRIPTION_UNDO_SEND_DURATION_DETAIL" = "Odaberi koliko dugo će gumb za poništavanje ostati aktivan nakon slanja tweeta.";
 
 /* Presets — settings import and export */
 "SETTINGS_EXPORT_TITLE" = "Izvezi postavke";
@@ -415,11 +415,11 @@
 "SETTINGS_EXPORT_WRITE_FAILED" = "Datoteka sa postavkama nije mogla biti napravljena.";
 
 "SETTINGS_IMPORT_CONFIRM_TITLE" = "Uvezi postavke?";
-"SETTINGS_IMPORT_CONFIRM_MESSAGE" = "Tvoje trenutne NeoFreeBird postavke biti će zamijenjene onima koje su unutar datoteke koje odabereš.";
+"SETTINGS_IMPORT_CONFIRM_MESSAGE" = "Tvoje trenutne NeoFreeBird postavke bit će zamijenjene postavkama iz datoteke koju odabereš.";
 "SETTINGS_IMPORT_CONFIRM_BUTTON" = "Izaberi datoteku";
 "SETTINGS_IMPORT_FAILED_TITLE" = "Uvoz nije uspio";
 "SETTINGS_IMPORT_SUCCESS_TITLE" = "Postavke uvezene";
-"SETTINGS_IMPORT_SUCCESS_MESSAGE" = "%ld postavke su uvezene. Resetiraj aplikaciju da bi sve postavke stupile na snagu.";
+"SETTINGS_IMPORT_SUCCESS_MESSAGE" = "Uvezeno postavki: %ld. Ponovno pokreni aplikaciju da bi se primijenile.";
 "SETTINGS_IMPORT_RESTART_BUTTON" = "Restart";
 "SETTINGS_IMPORT_LATER_BUTTON" = "Kasnije";
 
