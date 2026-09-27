@@ -14,29 +14,30 @@ Strictly per-language: a language without its own copy of this file gets no gene
 renaming at all.
 */
 
-"yeniden gönderilere göre sırala" = "retweetleri sırala";
-"yeniden gönderileri kapat" = "retweetleri kapat";
-"yeniden gönderileri aç" = "retweetleri aç";
-"yeniden gönderiliyor" = "retweetleniyor";
-"yeniden gönderildi" = "retweetlendi";
-"yeniden gönderiler" = "retweetler";
-"yeniden gönderiyi" = "retweet'i";
-"yeniden gönderi" = "retweet";
-"yeniden gönder" = "retweetle";
+"yeniden gönderilere göre sırala" = "Retweetleri Sırala";
+"yeniden gönderileri kapat" = "Retweetleri Kapat";
+"yeniden gönderileri aç" = "Retweetleri Aç";
+"yeniden gönderiliyor" = "Retweetleniyor";
+"yeniden gönderildi" = "Retweetlendi";
+"yeniden gönderdi" = "Retweetledi";
+"yeniden gönderiler" = "Retweetler";
+"yeniden gönderiyi" = "Retweet'i";
+"yeniden gönderi" = "Retweet";
+"yeniden gönder" = "Retweetle";
 
-"gönderi etkileşimlerini" = "tweet etkileşimlerini";
-"gönderi etkinliği" = "tweet etkinliği";
+"gönderi etkileşimlerini" = "Tweet Etkileşimlerini";
+"gönderi etkinliği" = "Tweet Etkinliği";
 "gönderi sayısı" = "Tweetler";
-"gönderiliyor" = "tweetleniyor";
-"gönderildi" = "tweetlendi";
-"gönderiler" = "tweetler";
-"gönderiyi" = "tweet'i";
-"gönderi" = "tweetle";
+"gönderiliyor" = "Tweetleniyor";
+"gönderildi" = "Tweetlendi";
+"gönderiler" = "Tweetler";
+"gönderiyi" = "Tweet'i";
+"gönderi" = "Tweet";
 
-"alıntı sayısına göre sırala" = "alıntı tweetleri sırala";
-"alıntıları" = "alıntılanan tweetleri";
-"alıntılar" = "alıntı tweetler";
-"alıntı" = "tweeti alıntıla";
+"alıntı sayısına göre sırala" = "Alıntı Tweetleri Sırala";
+"alıntıları" = "Alıntılanan Tweetleri";
+"alıntılar" = "Alıntı Tweetler";
+"alıntı" = "Tweeti Alıntıla";
 
 "premium" = "Blue";
 "X" = "Twitter";
