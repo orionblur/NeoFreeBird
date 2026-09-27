@@ -194,6 +194,9 @@
 "HIDE_FOLLOW_BUTTON_TITLE" = "Tweetlerde Takip Et düğmesini gizle";
 "HIDE_FOLLOW_BUTTON_DETAIL" = "Tweetlerdeki Takip Et düğmesini gizler.";
 
+"HIDE_MESSAGE_BUTTON_TITLE" = "Tweetlerde Mesaj düğmesini gizle";
+"HIDE_MESSAGE_BUTTON_DETAIL" = "Tweetlerdeki Mesaj düğmesini gizler.";
+
 "RESTORE_FOLLOW_BUTTON_TITLE" = "Abone Ol düğmesini gizle";
 "RESTORE_FOLLOW_BUTTON_DETAIL" = "Tweetlerde ve profillerde Abone Ol düğmesini gizler.";
 
