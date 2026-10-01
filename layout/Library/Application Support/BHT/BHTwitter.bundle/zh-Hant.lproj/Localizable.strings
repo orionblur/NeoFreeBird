@@ -137,6 +137,9 @@
 "HIDE_FOLLOW_BUTTON_TITLE" = "不顯示關注按鈕";
 "HIDE_FOLLOW_BUTTON_DETAIL" = "隱藏推文中的關注按鈕。";
 
+"HIDE_MESSAGE_BUTTON_TITLE" = "不顯示私訊按鈕";
+"HIDE_MESSAGE_BUTTON_DETAIL" = "隱藏推文中的私訊按鈕。";
+
 "RESTORE_FOLLOW_BUTTON_TITLE" = "不顯示訂閱按鈕";
 "RESTORE_FOLLOW_BUTTON_DETAIL" = "隱藏推文和個人資料中的訂閱按鈕。";
 
@@ -231,6 +234,7 @@
 "FETCHING_PROGRESS_TITLE" = "請稍候...";
 "DOWNLOAD_AS_GIF_OPTION_TITLE" = "下載為 GIF";
 "DOWNLOAD_AS_MP4_OPTION_TITLE" = "下載為 MP4";
+"DOWNLOAD_ALL_VIDEOS_OPTION_TITLE" = "下載所有影片";
 
 /*App icon*/
 
@@ -414,6 +418,9 @@
 /*Twitter Blue*/
 "DOWNLOAD_HIGHEST_QUALITY_TITLE" = "一律下載最高畫質";
 "DOWNLOAD_HIGHEST_QUALITY_DETAIL" = "跳過畫質選擇器，直接儲存最佳的 MP4。";
+
+"DOWNLOAD_ALL_VIDEOS_TITLE" = "下載所有影片";
+"DOWNLOAD_ALL_VIDEOS_DETAIL" = "新增一個下載推文中所有影片的選項。";
 
 "UPLOAD_FULL_HD_VIDEOS_TITLE" = "上傳全高畫質影片";
 "UPLOAD_FULL_HD_VIDEOS_DETAIL" = "解鎖以 1080p 上傳影片的能力。";
