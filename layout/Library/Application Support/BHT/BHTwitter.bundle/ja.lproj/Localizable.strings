@@ -45,7 +45,7 @@
 "MODERN_SETTINGS_CHAT_SUBTITLE" = "チャットのインターフェースに機能を追加できます。";
 
 "MODERN_SETTINGS_SEARCH_TITLE" = "探索と検索";
-"MODERN_SETTINGS_SEARCH_SUBTITLE" = "「検索」タブに表示される内容をカスタマイズできます。";
+"MODERN_SETTINGS_SEARCH_SUBTITLE" = "「話題を検索」タブに表示される内容をカスタマイズできます。";
 
 "MODERN_SETTINGS_PRESETS_TITLE" = "プリセット";
 "MODERN_SETTINGS_PRESETS_SUBTITLE" = "あらかじめ用意された設定を適用したり、独自の設定をエクスポート・インポートしたりできます。";
@@ -77,7 +77,7 @@
 "HIDE_TIMELINE_PROMPTS_TITLE" = "タイムラインの案内を非表示";
 "HIDE_TIMELINE_PROMPTS_DETAIL" = "「連絡先を追加」などの案内バナーを非表示にします。";
 
-"HIDE_BLOCKED_RETWEETS_TITLE" = "ブロック済ユーザーのリポスト非表示";
+"HIDE_BLOCKED_RETWEETS_TITLE" = "自分をブロックしたユーザーのリポストを非表示";
 "HIDE_BLOCKED_RETWEETS_DETAIL" = "あなたをブロックしているアカウントのリポストを非表示にします。";
 
 "PADLOCK_TITLE" = "Xをロック";
@@ -97,6 +97,12 @@
 
 "LIKE_CONFIRM_TITLE" = "「いいね」を確認";
 "LIKE_CONFIRM_DETAIL" = "ポストに「いいね」をする前に確認ダイアログを表示します。";
+
+"SHOW_QUOTE_NUMBERS_TITLE" = "引用数を表示";
+"SHOW_QUOTE_NUMBERS_DETAIL" = "ポストが受けた引用とリポストの数を表示します。";
+
+"SHOW_UNROUNDED_QUOTE_NUMBERS_TITLE" = "正確な引用数を表示";
+"SHOW_UNROUNDED_QUOTE_NUMBERS_DETAIL" = "ポストが受けた引用とリポストの正確な数を表示します。表示が崩れる場合があります。";
 
 "USE_TENOR_GIFS_TITLE" = "TenorのGIFを使用する";
 "USE_TENOR_GIFS_DETAIL" = "TwitterのGIF（GIPHY）の代わりにTenorを使用します。Tenorのほうが選択肢が豊富です。";
@@ -181,7 +187,7 @@
 "HIDE_FOLLOW_BUTTON_DETAIL" = "ポストに表示される「フォロー」ボタンを非表示にします。";
 
 "HIDE_MESSAGE_BUTTON_TITLE" = "ポスト内のDMボタンを非表示";
-"HIDE_MESSAGE_BUTTON_DETAIL" = "ポスト内のDMボタンを非表示にする"
+"HIDE_MESSAGE_BUTTON_DETAIL" = "ポスト内のDMボタンを非表示にします。";
 
 "RESTORE_FOLLOW_BUTTON_TITLE" = "「サブスクライブする」ボタンを非表示";
 "RESTORE_FOLLOW_BUTTON_DETAIL" = "ポストやプロフィールに表示される「サブスクライブする」ボタンを非表示にします。";
@@ -226,6 +232,10 @@
 
 "DOWNLOAD_HIGHEST_QUALITY_TITLE" = "常に最高画質でダウンロード";
 "DOWNLOAD_HIGHEST_QUALITY_DETAIL" = "画質の選択画面をスキップして、最高画質のMP4をすぐに保存します。";
+
+
+"DOWNLOAD_ALL_VIDEOS_TITLE" = "すべての動画をダウンロード";
+"DOWNLOAD_ALL_VIDEOS_DETAIL" = "ポスト内のすべての動画をダウンロードするオプションを追加します。";
 
 "UPLOAD_FULL_HD_VIDEOS_TITLE" = "フルHD動画をアップロード";
 "UPLOAD_FULL_HD_VIDEOS_DETAIL" = "1080pで動画をアップロードできるようにします。";
@@ -292,6 +302,7 @@
 "FETCHING_PROGRESS_TITLE" = "少々お待ちください…";
 "DOWNLOAD_AS_GIF_OPTION_TITLE" = "GIFとしてダウンロード";
 "DOWNLOAD_AS_MP4_OPTION_TITLE" = "MP4としてダウンロード";
+"DOWNLOAD_ALL_VIDEOS_OPTION_TITLE" = "すべての動画をダウンロード";
 
 /*App icon*/
 
@@ -307,7 +318,7 @@
 
 /*Theme*/
 "THEME_SETTINGS_NAVIGATION_TITLE" = "テーマ";
-"THEME_SETTINGS_NAVIGATION_DETAIL" = "Xのテーマカラーを変更できます。";
+"THEME_SETTINGS_NAVIGATION_DETAIL" = "Xのテーマカラーを変更できます。この設定はあなたの画面にのみ反映されます。";
 
 /*Tab bar*/
 "CUSTOM_TAB_BAR_SETTINGS_NAVIGATION_TITLE" = "カスタムナビゲーション";
@@ -410,6 +421,12 @@
 /* Presets — settings import and export */
 "SETTINGS_EXPORT_TITLE" = "設定のエクスポート";
 "SETTINGS_IMPORT_TITLE" = "設定のインポート";
+
+
+"CUSTOM_SEND_SOUND_TITLE" = "送信音をインポート";
+"CUSTOM_SEND_SOUND_DEFAULT" = "カスタムサウンドが選択されていません";
+"CUSTOM_SEND_SOUND_FAILED_TITLE" = "送信音のインポートに失敗しました";
+"CUSTOM_SEND_SOUND_TOO_LONG" = "選択したサウンドが長すぎます。7秒以内のサウンドを選択してください。";
 
 "SETTINGS_EXPORT_FAILED_TITLE" = "エクスポートに失敗しました";
 "SETTINGS_EXPORT_WRITE_FAILED" = "設定ファイルを作成できませんでした。";
