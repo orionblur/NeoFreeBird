@@ -15,8 +15,7 @@ extern void webLoginDidCaptureCookies(NSString* userID, NSString* username,
                                       NSDictionary<NSString*, NSString*>* cookiePairs);
 
 static NSString* const kWebLoginUserAgent =
-    @"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like "
-    @"Gecko) Version/17.4 Mobile/15E148 Safari/604.1";
+    @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36";
 
 // Pulls the numeric account id out of the twid cookie ("u=<id>", percent-encoded) and
 // the screen name out of the loaded page. Posts one of:
@@ -127,6 +126,9 @@ static NSString* stringOrEmpty(NSString* value) { return value ?: @""; }
     self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:cfg];
     self.webView.navigationDelegate = self;
     self.webView.customUserAgent = kWebLoginUserAgent;
+    if (@available(iOS 16.4, *)) {
+        self.webView.inspectable = YES;
+    }
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.webView];
 

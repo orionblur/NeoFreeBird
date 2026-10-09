@@ -163,6 +163,38 @@ static CTParagraphStyleRef CreateLTRParagraphStyle(CTParagraphStyleRef original)
 
 %end
 
+%hook NSString
+
+- (BOOL)tfs_plainTextShouldBeRenderedFromRight {
+    return [BHTSettings boolForKey:@"disable_rtl"] ? NO : %orig;
+}
+
+- (BOOL)tfs_statusTextShouldBeRenderedFromRight {
+    return [BHTSettings boolForKey:@"disable_rtl"] ? NO : %orig;
+}
+
+- (BOOL)tfs_labelTextShouldBeRenderedFromRight {
+    return [BHTSettings boolForKey:@"disable_rtl"] ? NO : %orig;
+}
+
+%end
+
+%hook TFNTwitterStatus
+
+- (BOOL)shouldBeRenderedFromRight {
+    return [BHTSettings boolForKey:@"disable_rtl"] ? NO : %orig;
+}
+
+%end
+
+%hook TFNTwitterDisplayTextModel
+
+- (BOOL)_tfn_shouldBeRenderedFromRight {
+    return [BHTSettings boolForKey:@"disable_rtl"] ? NO : %orig;
+}
+
+%end
+
 // MARK: - Strip tracking params from shared links
 
 // Strips the ?s= baked into the share URL format strings; &t= is already disabled

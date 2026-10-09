@@ -11,6 +11,26 @@
 #import "TFNHeaders.h"
 #import "TFSHeaders.h"
 
+@interface TFNTwitterAccountModel : NSObject
+- (void)lookUpStatusForID:(long long)statusID completionBlock:(void (^)(id status))completion;
+@end
+
+@interface TFNTwitterAccount (PostInteractions)
+@property (readonly, nonatomic) TFNTwitterAccountModel* model;
+@end
+
+@interface TFNTwitterStatus (PostInteractions)
+@property (readonly, nonatomic) long long quoteCount;
+@property (readonly, nonatomic) long long retweetCount;
+@end
+
+@interface T1PostInteractionsViewController : UIViewController
++ (id)viewControllerWithAccount:(TFNTwitterAccount*)account
+                                             statusID:(long long)statusID
+                                         statusUserID:(long long)statusUserID
+                                            initialTab:(long long)initialTab;
+@end
+
 @interface T1AppDelegate : UIResponder <UIApplicationDelegate>
 @property (retain, nonatomic) UIWindow* window;
 @end
@@ -52,6 +72,9 @@
 @interface T1MediaAttachmentsViewCell : UICollectionViewCell
 @property (nonatomic, strong, readwrite) id attachment;
 @property (nonatomic, strong) UIButton* uploadButton;
+@end
+
+@interface T1StandardStatusAskGrokButtonView: UIView
 @end
 
 @interface T1MediaAttachmentsViewCell () <UINavigationControllerDelegate,

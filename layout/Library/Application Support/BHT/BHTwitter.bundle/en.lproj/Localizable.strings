@@ -99,6 +99,12 @@
 "LIKE_CONFIRM_TITLE" = "Confirm likes";
 "LIKE_CONFIRM_DETAIL" = "Ask before liking a Tweet.";
 
+"SHOW_QUOTE_NUMBERS_TITLE" = "Show quote numbers";
+"SHOW_QUOTE_NUMBERS_DETAIL" = "Show the number of quotes and retweets a Tweet has received.";
+
+"SHOW_UNROUNDED_QUOTE_NUMBERS_TITLE" = "Show unrounded quote numbers";
+"SHOW_UNROUNDED_QUOTE_NUMBERS_DETAIL" = "Show the exact number of quotes and retweets a Tweet has received. Can cause overflow issues.";
+
 "USE_TENOR_GIFS_TITLE" = "Use Tenor GIFs";
 "USE_TENOR_GIFS_DETAIL" = "Use Tenor GIFs instead of Twitter's GIFs (GIPHY). Tenor has more options.";
 
@@ -148,9 +154,6 @@
 
 "RESTORE_REPLY_CONTEXT_TITLE" = "Restore reply context";
 "RESTORE_REPLY_CONTEXT_DETAIL" = "Shows the people that are being replied to under Tweets.";
-
-"RESTORE_TWEET_LABELS_TITLE" = "Show Tweet source labels";
-"RESTORE_TWEET_LABELS_DETAIL" = "Shows what client Tweets were made from.";
 
 /*Chat*/
 "HIDE_TYPING_INDICATOR_TITLE" = "Hide typing indicator";
@@ -415,6 +418,11 @@
 /* Presets — settings import and export */
 "SETTINGS_EXPORT_TITLE" = "Export settings";
 "SETTINGS_IMPORT_TITLE" = "Import settings";
+
+"CUSTOM_SEND_SOUND_TITLE" = "Import send sound";
+"CUSTOM_SEND_SOUND_DEFAULT" = "No custom sound selected";
+"CUSTOM_SEND_SOUND_FAILED_TITLE" = "Send sound import failed";
+"CUSTOM_SEND_SOUND_TOO_LONG" = "The sound you selected is too long. It must be 7 seconds or shorter.";
 
 "SETTINGS_EXPORT_FAILED_TITLE" = "Export failed";
 "SETTINGS_EXPORT_WRITE_FAILED" = "The settings file couldn't be created.";

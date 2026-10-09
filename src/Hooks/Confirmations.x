@@ -4,6 +4,22 @@
 //
 
 #import "HookHelpers.h"
+#import <AVFoundation/AVFoundation.h>
+
+static void PlayCustomSendSound(void) {
+    NSString* path = [[NSUserDefaults standardUserDefaults] stringForKey:@"custom_send_sound_path"];
+    if (path.length == 0) {
+        return;
+    }
+
+    static AVAudioPlayer* player;
+    NSError* error = nil;
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path]
+                                                    error:&error];
+    if (player && [player prepareToPlay]) {
+        [player play];
+    }
+}
 
 // Set while a block confirmation alert is expected, so the alert can be
 // answered without being shown (Fast block/mute, below).
@@ -37,10 +53,12 @@ static void ShowConfirmation(void (^confirmed)(void)) {
 
 - (void)_t1_didTapSendButton:(__unsafe_unretained UIButton*)sendButton {
     if (![BHTSettings boolForKey:@"tweet_confirm"]) {
+        PlayCustomSendSound();
         return %orig;
     }
 
     ShowConfirmation(^{
+        PlayCustomSendSound();
         %orig;
     });
 }
@@ -50,10 +68,12 @@ static void ShowConfirmation(void (^confirmed)(void)) {
 %hook T1PersistentComposeViewController
 - (void)_t1_sendReply {
     if (![BHTSettings boolForKey:@"tweet_confirm"]) {
+        PlayCustomSendSound();
         return %orig;
     }
 
     ShowConfirmation(^{
+        PlayCustomSendSound();
         %orig;
     });
 }
@@ -171,6 +191,14 @@ static BOOL FastBlockEnabled(void) {
 - (void)_showBlockMessageForContext:(id)context source:(long long)source {
     awaitingBlockAlert = FastBlockEnabled();
     %orig;
+}
+
+%end
+
+%hook TFNTwitterAccount
+
+- (BOOL)isXDSAlertBlockUserEnabled {
+    return FastBlockEnabled() ? NO : %orig;
 }
 
 %end

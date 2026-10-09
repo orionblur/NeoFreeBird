@@ -320,11 +320,3 @@ static NSString* CustomFontName(BOOL isBold) {
 }
 
 %end
-
-// Cephei blocks HBPreferences access from app processes unless this opt-in
-// returns YES.
-%hook HBForceCepheiPrefs
-+ (BOOL)forceCepheiPrefsWhichIReallyNeedToAccessAndIKnowWhatImDoingISwear {
-    return YES;
-}
-%end

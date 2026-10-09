@@ -107,6 +107,12 @@
 "LIKE_CONFIRM_TITLE" = "Confirmar me gusta";
 "LIKE_CONFIRM_DETAIL" = "Pregunta antes de dar me gusta a un Tweet.";
 
+"SHOW_QUOTE_NUMBERS_TITLE" = "Mostrar cifra de citas";
+"SHOW_QUOTE_NUMBERS_DETAIL" = "Muestra el número de citas y Retweets que ha recibido un Tweet.";
+
+"SHOW_UNROUNDED_QUOTE_NUMBERS_TITLE" = "Mostrar cifra exacta de citas sin redondear";
+"SHOW_UNROUNDED_QUOTE_NUMBERS_DETAIL" = "Muestra el número exacto de citas y Retweets que ha recibido un Tweet. La cifra podría salirse de la pantalla.";
+
 "TWEET_CONFIRM_TITLE" = "Confirmar Tweets";
 "TWEET_CONFIRM_DETAIL" = "Pregunta antes de publicar un Tweet.";
 
@@ -149,7 +155,7 @@
 "SQUARE_AVATARS_DETAIL" = "Da a todos fotos de perfil cuadradas como las cuentas de marca, igual que en el antiguo Twitter.";
 
 "REPLY_SORTING_TITLE" = "Sin orden de respuestas";
-"REPLY_SORTING_DETAIL" = "Desactiva la función de ordenación de respuestas en las conversaciones de tweets.";
+"REPLY_SORTING_DETAIL" = "Desactiva la función de ordenación de respuestas en las conversaciones de los Tweets.";
 
 "RESTORE_REPLY_CONTEXT_TITLE" = "Restaurar contexto de respuestas";
 "RESTORE_REPLY_CONTEXT_DETAIL" = "Muestra las personas a las que se está respondiendo debajo de los Tweets.";
@@ -190,7 +196,7 @@
 "RESTORE_FOLLOW_BUTTON_DETAIL" = "Oculta el botón de Suscribirse en los Tweets y en los perfiles.";
 
 "SHOW_UNROUNDED_COUNTS_TITLE" = "Mostrar cifras exactas";
-"SHOW_UNROUNDED_COUNTS_DETAIL" = "Muestra el número exacto de seguidores, seguidos y tweets en lugar de redondearlo al millar o millón más cercano.";
+"SHOW_UNROUNDED_COUNTS_DETAIL" = "Muestra el número exacto de seguidores, seguidos y Tweets en lugar de redondearlo al millar o millón más cercano.";
 
 /*Search*/
 "NO_HISTORY_TITLE" = "Sin historial de búsqueda";
@@ -230,6 +236,9 @@
 
 "DOWNLOAD_HIGHEST_QUALITY_TITLE" = "Siempre descargar en la más alta calidad";
 "DOWNLOAD_HIGHEST_QUALITY_DETAIL" = "Omite el selector de calidad y guarda el mejor MP4 de inmediato.";
+
+"DOWNLOAD_ALL_VIDEOS_TITLE" = "Descargar todos los vídeos";
+"DOWNLOAD_ALL_VIDEOS_DETAIL" = "Agrega una opción para descargar todos los vídeos en un Tweet.";
 
 "UPLOAD_FULL_HD_VIDEOS_TITLE" = "Subir vídeos en Full HD";
 "UPLOAD_FULL_HD_VIDEOS_DETAIL" = "Desbloquea la posibilidad de subir vídeos en 1080p.";
@@ -296,6 +305,7 @@
 "FETCHING_PROGRESS_TITLE" = "Un momento...";
 "DOWNLOAD_AS_GIF_OPTION_TITLE" = "Descargar como GIF";
 "DOWNLOAD_AS_MP4_OPTION_TITLE" = "Descargar como MP4";
+"DOWNLOAD_ALL_VIDEOS_OPTION_TITLE" = "Descargar todos los vídeos";
 
 /*App icon*/
 
@@ -349,7 +359,7 @@
 "HIDE_TWEET_BUTTON_DETAIL" = "Elimina el botón de Tweet de la barra de navegación.";
 
 /*Deprecated*/
-"MODERN_SETTINGS_PLACEHOLDER_TEXT" = "Aquí no hay nada que ver... por ahora";
+"MODERN_SETTINGS_PLACEHOLDER_TEXT" = "Aquí no hay nada que ver... por ahora.";
 "MODERN_SETTINGS_PLACEHOLDER_DETAIL_TEXT" = "Esta sección estará disponible próximamente. ¡Mantente atento a más funciones de NeoFreeBird!";
 
 "SOURCE_UNAVAILABLE" = "Origen no disponible";
@@ -414,6 +424,11 @@
 /* Presets — settings import and export */
 "SETTINGS_EXPORT_TITLE" = "Exportar ajustes";
 "SETTINGS_IMPORT_TITLE" = "Importar ajustes";
+
+"CUSTOM_SEND_SOUND_TITLE" = "Importar sonido de envío";
+"CUSTOM_SEND_SOUND_DEFAULT" = "Ningún sonido personalizado seleccionado";
+"CUSTOM_SEND_SOUND_FAILED_TITLE" = "Error al importar el sonido de envío";
+"CUSTOM_SEND_SOUND_TOO_LONG" = "El sonido que elegiste es demasiado largo. Debe durar 7 segundos o menos.";
 
 "SETTINGS_EXPORT_FAILED_TITLE" = "Error al exportar";
 "SETTINGS_EXPORT_WRITE_FAILED" = "No se pudo crear el archivo de ajustes.";

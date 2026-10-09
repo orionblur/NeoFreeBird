@@ -1,10 +1,10 @@
 Package: com.bandarhl.bhtwitter
 Name: orionblur-NFB-BHTwitter
-Version: 7.0.0
+Version: 7.1.0
 Architecture: iphoneos-arm
 Description: Awesome tweak for Twitter
 Maintainer: NeoFreeBird
 Author: NeoFreeBird
 Section: Tweaks
-Depends: mobilesubstrate, ws.hbang.common
+Depends: mobilesubstrate
 Conflicts: com.den.twigalaxy, xyz.cypwn.twigalaxy, xyz.cypwn.bhtwitter, com.netskao.twitternoads, xyz.cypwn.bringbacktwitter

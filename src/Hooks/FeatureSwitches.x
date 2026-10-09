@@ -75,11 +75,6 @@ static NSNumber* FeatureSwitchOverrideValueForKey(NSString* key) {
         return hideCustomTimelines ? @NO : nil;
     }
 
-    // Edit tweet
-    if ([key isEqualToString:@"edit_tweet_ga_composition_enabled"] ||
-        [key isEqualToString:@"edit_tweet_pdp_dialog_enabled"]) {
-        return @YES;
-    }
 
     // Restore the animated launch screen (AppLifecycle.x strips its X-shaped
     // reveal mask)

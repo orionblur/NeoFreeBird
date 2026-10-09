@@ -8,8 +8,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <Foundation/Foundation.h>
-#import <Preferences/PSListController.h>
-#import <Preferences/PSSpecifier.h>
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 #import <dlfcn.h>
@@ -43,6 +41,8 @@ void MarkEmptiedModuleChrome(NSArray* items, NSMutableIndexSet* removed);
 
 // Live square-avatar restyling (Avatars.x)
 void applySquareAvatarsSetting(void);
+
+NSString* formatNumberWithSuffix(long long number);
 
 // Custom theme color re-apply (Theme.x)
 void applySelectedThemeColor(void);

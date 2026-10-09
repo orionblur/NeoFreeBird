@@ -136,3 +136,15 @@ UIColor* CurrentAccentColor(void) {
 
     return [UIColor systemBlueColor];
 }
+
+NSString* formatNumberWithSuffix(long long number) {
+    if (number < 1000) {
+        return [NSString stringWithFormat:@"%lld", number];
+    } else if (number < 1000000) {
+        return [NSString stringWithFormat:@"%.1fK", number / 1000.0];
+    } else if (number < 1000000000) {
+        return [NSString stringWithFormat:@"%.1fM", number / 1000000.0];
+    } else {
+        return [NSString stringWithFormat:@"%.1fB", number / 1000000000.0];
+    }
+}

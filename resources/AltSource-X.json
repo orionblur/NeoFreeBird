@@ -10,7 +10,7 @@
       "name": "X",
       "bundleIdentifier": "com.atebits.Tweetie2",
       "developerName": "actuallyaridan, nyaathea, timi2506, theacrat, orionblur",
-      "subtitle": "NeoFreeBird version 7.0.0",
+      "subtitle": "NeoFreeBird version 7.1.0",
       "localizedDescription": "NeoFreeBird-BHTwitter",
       "iconURL": "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v7/resources/x_icon_rounded.png",
       "tintColor": "#000000",
@@ -23,6 +23,15 @@
         "https://raw.githubusercontent.com/orionblur/NeoFreeBird/v7/resources/timeline/timeline5.png"
       ],
       "versions": [
+        {
+          "version": "12.31.1",
+          "buildVersion": "1",
+          "date": "2026-10-05T04:38:40Z",
+          "downloadURL": "https://github.com/orionblur/NeoFreeBird/releases/download/v7.1.0/orionblur-NFB-BHTwitter-sideloaded-X_7.1.0_12.31.1.ipa",
+          "size": 260435941,
+          "minOSVersion": "15.0",
+          "localizedDescription": "New Features\n- Added a “Download all Videos” button (only works when all media items are videos)\n- Added option to see quote and retweet numbers (with an option for unrounded counts)\n- Added an option to play a custom sound (under 7 seconds and with the AAC format) when a tweet is posted\n- Hide the “Download Grok Bot” button on Grok Tweets\n- NeoFreeBird now has (preliminary!) support for MacOS!\n\nFixes\n- Fixed Spaces not loading\n- Fixed all web views not loading (including Community Notes, reports, and web replying)\n- Fixed the header switching back to black from dim on iPad\n- Fixed mute settings not loading\n- Fixed ads showing up in the Tiktok-like video feed\n- Fixed verified tweets not showing up in searches and edit histories when the “Hide verified tweets” option was on\n- Removed the “Edit Tweet” prompt showing up, this has been server-side for a while\n- Removed tweet source labels from the codebase, as X has removed it from all API calls\n- Fixed manual Grok Translate calls\n\nKnown Issues\n- The option to see quote and retweet numbers is not localized. Most likely will be fixed in the next version.\n"
+        },
         {
           "version": "12.28.1",
           "buildVersion": "2",

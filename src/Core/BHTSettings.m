@@ -93,6 +93,11 @@ static NSDictionary<NSString*, NSDictionary*>* BHTSettingsPages(void) {
                       @"default": @NO},
                     @{@"key": @"hide_custom_timelines",
                       @"default": @NO},
+                    @{@"key": @"show_quote_numbers",
+                      @"default": @NO},
+                    @{@"key": @"show_unrounded_quote_numbers",
+                      @"parentKey": @"show_quote_numbers",
+                      @"default": @NO},
                     @{@"key": @"hide_blocked_retweets",
                       @"default": @NO},
                     @{@"key": @"hide_tweet_button",
@@ -334,6 +339,13 @@ static NSDictionary<NSString*, NSDictionary*>* BHTSettingsPages(void) {
                         @"type": @"toggle"
                     },
                     @{
+                        @"type": @"compactButton",
+                        @"titleKey": @"CUSTOM_SEND_SOUND_TITLE",
+                        @"action": @"importTweetSound:",
+                        @"prefKeyForSubtitle": @"custom_send_sound_name",
+                        @"subtitleDefaultKey": @"CUSTOM_SEND_SOUND_DEFAULT"
+                    },
+                    @{
                         @"key": @"bypass_age_verification",
                         @"default": @YES,
                         @"type": @"toggle"
@@ -346,11 +358,6 @@ static NSDictionary<NSString*, NSDictionary*>* BHTSettingsPages(void) {
                         @"default": @YES,
                         @"type": @"toggle"
                     },
-                    @{
-                        @"key": @"restore_tweet_labels",
-                        @"default": @NO,
-                        @"type": @"toggle"
-                    }
                 ]
             },
             @"search": @{

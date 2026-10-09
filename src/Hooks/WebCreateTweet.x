@@ -868,9 +868,12 @@ static BOOL isPeriscopeAuthURL(NSURL* url) {
 
 static BOOL isMuteURL(NSURL* url) { return url && [url.path containsString:@"/1.1/mutes"]; }
 
-// CreateTweet needs to go through the web path, otherwise AppAttest kicks in
+static BOOL isGrokURL(NSURL* url) { return url && [url.path containsString:@"/2/grok"]; }
+
+// These paths need to go through the web path, otherwise AppAttest kicks in
 static BOOL isWriteRequest(NSURL* url) {
-    return isCreateTweetURL(url) || isAccountURL(url) || isPeriscopeAuthURL(url) || isMuteURL(url);
+    return isCreateTweetURL(url) || isAccountURL(url) || isPeriscopeAuthURL(url) ||
+           isMuteURL(url) || isGrokURL(url);
 }
 
 static NSURL* webEquivalentURL(NSURL* url) {
@@ -1030,8 +1033,8 @@ static NSMutableURLRequest* webRequestFromNativeSend(NSURLRequest* request) {
     }
     applyWebAuth(outgoing, authToken, ct0, postingUserID);
 
-    // Only the write (CreateTweet) is routed to the web endpoint and carries a
-    // transaction id; reads stay native and never need one.
+    // Web writes are routed to the web endpoint and carry a transaction id; reads
+    // stay native and never need one.
     NSString* token = isWriteRequest(outgoing.URL) ? transactionIdForRequest(outgoing) : nil;
     if (token.length) {
         [outgoing setValue:token forHTTPHeaderField:@"x-client-transaction-id"];
@@ -1131,6 +1134,9 @@ NSDictionary* currentWebCredentials(void) {
 
 static const void* WebViewSessionCookiesKey = &WebViewSessionCookiesKey;
 static const void* WebStorePendingLoadKey = &WebStorePendingLoadKey;
+// Marks a data store we seeded for a cookie-login session, so the loadRequest: hook can
+// tell our authenticated webviews apart and bypass the native OAuth auth bridge.
+static const void* WebStoreCookieLoginKey = &WebStoreCookieLoginKey;
 
 // A cookie-login account's cached web session. Never blocks: a missing ct0 is fine,
 // since x.com mints one on the first authenticated page load.
@@ -1183,11 +1189,34 @@ static NSDictionary* cachedWebSessionForAccount(id account) {
     return self;
 }
 
+// Every web view goes through here, store web cookies so that we don't have a miss
+- (void)_t1_sharedInitWithRootURL:(id)rootURL
+                          account:(id)account
+                     sourceStatus:(id)sourceStatus
+                  scribeComponent:(id)scribeComponent
+                 scribeParameters:(id)scribeParameters {
+    %orig;
+    if (objc_getAssociatedObject(self, WebViewSessionCookiesKey)) {
+        return;
+    }
+    NSDictionary* session = cachedWebSessionForAccount(account);
+    if (session) {
+        objc_setAssociatedObject(self, WebViewSessionCookiesKey, session,
+                                 OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+}
+
 // Called from -loadView with the configuration the webview is about to be created with.
 - (id)updateConfiguration:(id)configuration {
     id result = %orig;
 
+    id account = [self respondsToSelector:@selector(account)] ? [self account] : nil;
     NSDictionary* session = objc_getAssociatedObject(self, WebViewSessionCookiesKey);
+    if (!session) {
+        session = cachedWebSessionForAccount(account);
+    }
+
+    NSString* dbgUID = userIDStringForAccount(account);
     WKWebViewConfiguration* config =
         [result isKindOfClass:[WKWebViewConfiguration class]] ? result : configuration;
     if (!session || ![config isKindOfClass:[WKWebViewConfiguration class]]) {
@@ -1197,6 +1226,7 @@ static NSDictionary* cachedWebSessionForAccount(id account) {
     WKWebsiteDataStore* store = [WKWebsiteDataStore nonPersistentDataStore];
     config.websiteDataStore = store;
 
+    objc_setAssociatedObject(store, WebStoreCookieLoginKey, @YES, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     objc_setAssociatedObject(store, WebStorePendingLoadKey, [NSMutableArray array],
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     seedWebSessionCookies(store.httpCookieStore, session, ^{
@@ -1213,20 +1243,69 @@ static NSDictionary* cachedWebSessionForAccount(id account) {
 
 %end
 
+static NSURLRequest* unwrapAuthBridgeRequest(NSURLRequest* request) {
+    NSURL* url = request.URL;
+    if (![url.path containsString:@"/account/authenticate_web_view"]) {
+        return request;
+    }
+    NSURLComponents* comps = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
+    for (NSURLQueryItem* item in comps.queryItems) {
+        if ([item.name isEqualToString:@"redirect_url"] && item.value.length) {
+            NSURL* target = [NSURL URLWithString:item.value];
+            if (target) {
+                NSMutableURLRequest* out = [request mutableCopy];
+                out.URL = target;
+                return out;
+            }
+            break;
+        }
+    }
+    return request;
+}
+
 %hook WKWebView
 - (WKNavigation*)loadRequest:(NSURLRequest*)request {
-    NSMutableArray* pending =
-        objc_getAssociatedObject(self.configuration.websiteDataStore, WebStorePendingLoadKey);
+    WKWebsiteDataStore* store = self.configuration.websiteDataStore;
+    NSURLRequest* effective = request;
+    if (objc_getAssociatedObject(store, WebStoreCookieLoginKey)) {
+        effective = unwrapAuthBridgeRequest(request);
+    }
+
+    NSMutableArray* pending = objc_getAssociatedObject(store, WebStorePendingLoadKey);
     if (!pending) {
-        return %orig;
+        return %orig(effective);
     }
 
     __weak WKWebView* weakSelf = self;
     [pending removeAllObjects];
     [pending addObject:[^{
-                 [weakSelf loadRequest:request];
+                 [weakSelf loadRequest:effective];
              } copy]];
     return nil;
+}
+%end
+
+static BOOL replaceTaskRequest(NSURLSessionTask* task, NSURLRequest* request) {
+    @try {
+        [task setValue:request forKey:@"originalRequest"];
+        [task setValue:request forKey:@"currentRequest"];
+    } @catch (__unused NSException* exception) {
+        return NO;
+    }
+    return task.currentRequest == request;
+}
+
+%hook NSURLSessionTask
+- (void)resume {
+    NSURLRequest* request = self.currentRequest ?: self.originalRequest;
+    if (self.state == NSURLSessionTaskStateSuspended && isGrokURL(request.URL) &&
+        requestUsesNativeOAuth(request)) {
+        NSMutableURLRequest* outgoing = webRequestFromNativeSend(request);
+        if (outgoing) {
+            replaceTaskRequest(self, outgoing);
+        }
+    }
+    %orig;
 }
 %end
 
@@ -1253,6 +1332,29 @@ static NSDictionary* cachedWebSessionForAccount(id account) {
     return %orig;
 }
 
+- (NSURLSessionDataTask*)dataTaskWithRequest:(NSURLRequest*)request
+                                    delegate:(id)delegate {
+    NSMutableURLRequest* outgoing = webRequestFromNativeSend(request);
+    if (outgoing) {
+        NSURLSessionDataTask* task = %orig(outgoing, delegate);
+        watchCreateTweetTask(task, objc_getAssociatedObject(outgoing, WebPostingUIDKey));
+        return task;
+    }
+    return %orig;
+}
+
+- (NSURLSessionDataTask*)dataTaskWithRequest:(NSURLRequest*)request
+                                    delegate:(id)delegate
+                              delegateQueue:(NSOperationQueue*)delegateQueue {
+    NSMutableURLRequest* outgoing = webRequestFromNativeSend(request);
+    if (outgoing) {
+        NSURLSessionDataTask* task = %orig(outgoing, delegate, delegateQueue);
+        watchCreateTweetTask(task, objc_getAssociatedObject(outgoing, WebPostingUIDKey));
+        return task;
+    }
+    return %orig;
+}
+
 - (NSURLSessionUploadTask*)uploadTaskWithRequest:(NSURLRequest*)request fromData:(NSData*)bodyData {
     NSMutableURLRequest* outgoing = webRequestFromNativeSend(request);
     if (outgoing) {
@@ -1267,6 +1369,16 @@ static NSDictionary* cachedWebSessionForAccount(id account) {
     NSMutableURLRequest* outgoing = webRequestFromNativeSend(request);
     if (outgoing) {
         NSURLSessionUploadTask* task = %orig(outgoing, fileURL);
+        watchCreateTweetTask(task, objc_getAssociatedObject(outgoing, WebPostingUIDKey));
+        return task;
+    }
+    return %orig;
+}
+
+- (NSURLSessionUploadTask*)uploadTaskWithStreamedRequest:(NSURLRequest*)request {
+    NSMutableURLRequest* outgoing = webRequestFromNativeSend(request);
+    if (outgoing) {
+        NSURLSessionUploadTask* task = %orig(outgoing);
         watchCreateTweetTask(task, objc_getAssociatedObject(outgoing, WebPostingUIDKey));
         return task;
     }
